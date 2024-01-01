@@ -1,0 +1,31 @@
+/*Repositionner les fleurs dans la section nomination oscars*/
+.site-footer{
+    &::before {
+        content: none;
+    }
+    &::after {
+        content: none;
+}}
+.oscars-bloc::before {
+    content: url(../images/Sunflower.png);
+    position: relative;
+    bottom: 100px;
+    left: 60px;
+}
+.oscars-bloc::after {
+    content: url(../images/orchid.png);
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+}
+
+/*rotation des fleurs*/
+.story h2::after, 
+.story__article::after, 
+#studio h2::before, 
+#studio h2::after, 
+.oscars-bloc::before, 
+.oscars-bloc::after, 
+.site-footer ul::after {
+        @include rotateFlowers;
+      }

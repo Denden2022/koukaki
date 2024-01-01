@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@keyframes rotateAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*Repositionner les fleurs dans la section nomination oscars*/
+.site-footer::before {
+  content: none;
+}
+.site-footer::after {
+  content: none;
+}
+
+.oscars-bloc::before {
+  content: url(../images/Sunflower.png);
+  position: relative;
+  bottom: 100px;
+  left: 60px;
+}
+
+.oscars-bloc::after {
+  content: url(../images/orchid.png);
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+}
+
+/*rotation des fleurs*/
+.story h2::after,
+.story__article::after,
+#studio h2::before,
+#studio h2::after,
+.oscars-bloc::before,
+.oscars-bloc::after,
+.site-footer ul::after {
+  /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
+  animation: rotateAnimation 20s linear infinite;
+}
+
+/*section nomination oscars*/
+/* Bloc orange*/
+#oscars-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.oscars-orange {
+  height: 196px;
+  width: 60%;
+}
+
+.oscars-background img {
+  position: absolute;
+}
+
+.oscars-text {
+  position: relative;
+  font-size: 38px;
+  font-weight: 600;
+  font-family: quicksand;
+  color: #FFF5E9;
+  margin-left: 70px;
+  bottom: 280px;
+  width: 75%;
+}/*# sourceMappingURL=koukaki.css.map */
