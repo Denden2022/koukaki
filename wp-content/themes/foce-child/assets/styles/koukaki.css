@@ -14,7 +14,7 @@
 }
 
 .oscars-bloc::before {
-  content: url(../images/Sunflower.png);
+  content: url(../images/Sunflower.svg);
   position: relative;
   bottom: 100px;
   left: 60px;
@@ -39,6 +39,63 @@
   animation: rotateAnimation 20s linear infinite;
 }
 
+@keyframes fadeInUp {
+  50% {
+    opacity: 0.7;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#studio h2 {
+  overflow: visible;
+  font-size: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+#story h2 {
+  overflow-x: visible;
+  position: relative;
+  font-size: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes down-up {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .banner img, .story, #studio {
+    animation-name: down-up;
+    animation-duration: 3s;
+  }
+}
+@keyframes up-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .banner {
+    animation-name: up-down;
+    animation-duration: 2s;
+  }
+}
 /*section nomination oscars*/
 /* Bloc orange*/
 #oscars-id {
@@ -66,5 +123,34 @@
   color: #FFF5E9;
   margin-left: 70px;
   bottom: 280px;
-  width: 75%;
-}/*# sourceMappingURL=koukaki.css.map */
+  width: 80%;
+}
+
+/*.hidden {
+    content: url(../images/Studio.svg);
+    width: 50%;
+    position: relative;
+    margin: auto;
+    bottom:180px;
+}
+#studio{
+
+    & > div::before {
+    top: 65%;
+    }
+}
+
+#studio{
+&::before {
+    content: url(../images/random_flower.png);
+    position: relative;
+    bottom: 10px;
+    right: 80px;
+    }
+&::after {
+    content: url(../images/flower.png);
+    position: relative;
+    float: right;
+    right: 150px;
+    bottom: 600px;
+  }}*//*# sourceMappingURL=koukaki.css.map */
