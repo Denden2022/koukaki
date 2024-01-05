@@ -118,15 +118,16 @@
     transform: translateX(-480px);
   }
 }
-.anim-clouds h3::before {
-  animation: clouds 2s ease-in-out forwards;
-  transform: translateX();
+@media (prefers-reduced-motion: no-preference) {
+  .anim-clouds-scroll h3::before {
+    animation: clouds 2s ease-in-out forwards;
+    transform: translateX();
+  }
+  .anim-clouds-scroll h3::after {
+    animation: clouds 2s ease-in-out forwards;
+    transform: translateX();
+  }
 }
-.anim-clouds h3::after {
-  animation: clouds 2s ease-in-out forwards;
-  transform: translateX();
-}
-
 /*section nomination oscars*/
 #oscars-id {
   display: flex;
@@ -186,6 +187,41 @@
     transform: translateY(-50%);
   }
 }
+.title-story img {
+  position: absolute;
+  width: 25%;
+  height: 350px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .title-story h1 {
+    position: relative;
+    font-family: quicksand;
+    font-weight: bold;
+    font-size: 62px;
+    margin-left: 18%;
+    margin-top: 100px;
+    color: #FFF5E9;
+    animation: move-text2 4s ease-in-out forwards;
+    transform: translateY();
+  }
+}
+.main-character::before {
+  position: absolute;
+  content: url(../images/sunflower_leaves.png);
+  left: 80px;
+  top: 150px;
+}
+
+.title-story::before {
+  position: absolute;
+  content: url(../images/Sunflower.png);
+  left: 120px;
+  top: 420px;
+}
+
 @keyframes move-text2 {
   0% {
     transform: translateY(50%);
@@ -194,35 +230,19 @@
     transform: translateY(0);
   }
 }
-.title-story img {
-  position: absolute;
-  width: 25%;
-  height: 200px;
+@media (prefers-reduced-motion: no-preference) {
+  .background h4 {
+    animation: move-text 4s ease-in-out forwards;
+    transform: translateY(80px);
+    position: absolute;
+    background-image: fixed;
+    font-family: quicksand;
+    font-weight: bold;
+    font-size: 62px;
+    margin-left: 18%;
+    color: #FFF5E9;
+  }
 }
-
-.title-story h1 {
-  position: relative;
-  font-family: quicksand;
-  font-weight: bold;
-  font-size: 62px;
-  margin-left: 18%;
-  color: #FFF5E9;
-  animation: move-text2 2s ease-in-out forwards;
-  transform: translateY();
-}
-
-.background h4 {
-  animation: move-text 2s ease-in-out forwards;
-  transform: translateY(80px);
-  position: absolute;
-  background-image: fixed;
-  font-family: quicksand;
-  font-weight: bold;
-  font-size: 62px;
-  margin-left: 18%;
-  color: #FFF5E9;
-}
-
 .background img {
   position: relative;
   width: 60%;

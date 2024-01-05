@@ -43,7 +43,8 @@
 	}
 }
 
-.anim-clouds {
+@media (prefers-reduced-motion: no-preference) {
+.anim-clouds-scroll {
     & h3::before {
     animation: clouds 2s ease-in-out forwards;
     transform: translateX();
@@ -52,4 +53,5 @@
         animation: clouds 2s ease-in-out forwards;
         transform: translateX();
         }
+    }
 }
