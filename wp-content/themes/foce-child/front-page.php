@@ -74,8 +74,7 @@ get_header();
         <section id="studio" class="anim-titles">
             <div class="background">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/purple_studio_bg.png'; ?>" alt="Background Image">
-                <p>Studio Koukaki</p>
-                <h2 class="title">Studio Koukaki</h2>
+                <h3>Studio Koukaki</h3>
             </div>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>

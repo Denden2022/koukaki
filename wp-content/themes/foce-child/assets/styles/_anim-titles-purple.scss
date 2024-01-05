@@ -3,33 +3,43 @@
 	  transform: translateY(50%);
 	}
 	50% {
-		transform: translateY(0);
+		transform: translateY(30);
 	}
 	100% {
-	  transform: translateY(-20%);
+	  transform: translateY(0);
 	}
   }
-.background p {
-	animation: move-text 3s ease-in-out forwards;
+.background h3 {
+	animation: move-text 2s ease-in-out forwards;
     transform: translateY(20px);
 }
  
 .background img {
 	position: relative;
 	width: 75%;
-	height: auto;
 	margin: auto;
 }
 #studio .title {
 	display: none;
 }
-.background p {
+.background h3 {
 	position: absolute;
+	background-image: fixed;
 	color: white;
 	font-family: quicksand;
 	font-weight: bold;
 	font-size: 62px;
-	margin-left: 18%;
+	margin-left: 10%;
 	top: 10px;
 	color: #FFF5E9;
+}
+#place::after {
+	position: absolute;
+	content: url(../images/random_flower.png);
+	margin-top: 780px;
+}
+.background h3::before {
+	position: absolute;
+	content: url(../images/flower.png);
+	margin-left: 800px;
 }

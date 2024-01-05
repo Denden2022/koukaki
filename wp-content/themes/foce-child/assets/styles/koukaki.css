@@ -5,33 +5,13 @@
     transform: rotate(360deg);
   }
 }
-/*Repositionner les fleurs dans la section nomination oscars*/
-.site-footer::before {
-  content: none;
-}
-.site-footer::after {
-  content: none;
-}
-
-.oscars-bloc::before {
-  content: url(../images/Sunflower.svg);
-  position: relative;
-  bottom: 100px;
-  left: 60px;
-}
-
-.oscars-bloc::after {
-  content: url(../images/orchid.png);
-  position: relative;
-  left: 100px;
-  bottom: 100px;
-}
-
 /*rotation des fleurs*/
 .story h2::after,
 .story__article::after,
 #studio h2::before,
 #studio h2::after,
+#place::after,
+.background h3::before,
 .oscars-bloc::before,
 .oscars-bloc::after,
 .site-footer ul::after {
@@ -107,7 +87,7 @@
   position: absolute;
   content: url(../images/big_cloud.png);
   filter: blur(16px);
-  bottom: 150px;
+  bottom: 140px;
   left: 950px;
 }
 .anim-clouds h3::before {
@@ -148,7 +128,6 @@
 }
 
 /*section nomination oscars*/
-/* Bloc orange*/
 #oscars-id {
   display: flex;
   flex-direction: row;
@@ -178,26 +157,46 @@
   width: 80%;
 }
 
+.site-footer::before {
+  content: none;
+}
+.site-footer::after {
+  content: none;
+}
+
+.oscars-bloc::before {
+  content: url(../images/Sunflower.svg);
+  position: relative;
+  bottom: 100px;
+  left: 60px;
+}
+
+.oscars-bloc::after {
+  content: url(../images/orchid.png);
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+}
+
 @keyframes move-text {
   0% {
     transform: translateY(50%);
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(30);
   }
   100% {
-    transform: translateY(-20%);
+    transform: translateY(0);
   }
 }
-.background p {
-  animation: move-text 3s ease-in-out forwards;
+.background h3 {
+  animation: move-text 2s ease-in-out forwards;
   transform: translateY(20px);
 }
 
 .background img {
   position: relative;
   width: 75%;
-  height: auto;
   margin: auto;
 }
 
@@ -205,13 +204,26 @@
   display: none;
 }
 
-.background p {
+.background h3 {
   position: absolute;
+  background-image: fixed;
   color: white;
   font-family: quicksand;
   font-weight: bold;
   font-size: 62px;
-  margin-left: 18%;
+  margin-left: 10%;
   top: 10px;
   color: #FFF5E9;
+}
+
+#place::after {
+  position: absolute;
+  content: url(../images/random_flower.png);
+  margin-top: 780px;
+}
+
+.background h3::before {
+  position: absolute;
+  content: url(../images/flower.png);
+  margin-left: 800px;
 }/*# sourceMappingURL=koukaki.css.map */
