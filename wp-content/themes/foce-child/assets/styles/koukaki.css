@@ -39,63 +39,114 @@
   animation: rotateAnimation 20s linear infinite;
 }
 
-@keyframes fadeInUp {
-  50% {
-    opacity: 0.7;
-    transform: translateY(10px);
+@keyframes down-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-#studio h2 {
-  overflow: visible;
-  font-size: 60px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-#story h2 {
-  overflow-x: visible;
-  position: relative;
-  font-size: 60px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes down-up {
-  0% {
-    transform: translateY(100%);
-  }
-  50% {
     transform: translateY(0);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   .banner img, .story, #studio {
     animation-name: down-up;
-    animation-duration: 3s;
+    animation-duration: 1500ms;
   }
 }
 @keyframes up-down {
   0% {
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(-100%);
   }
   100% {
-    opacity: 1;
+    opacity: 0.3;
     transform: translateY(0);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .banner {
+  #background-video, .banner {
     animation-name: up-down;
-    animation-duration: 2s;
+    animation-duration: 1s;
   }
 }
+@keyframes float-logo {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.banner img {
+  animation: float-logo 2s ease-in-out infinite;
+  transform: translateY(20px);
+}
+
+#background-video {
+  position: relative;
+  left: 25%;
+  width: auto;
+}
+
+.banner > img {
+  position: relative;
+  right: 50%;
+}
+
+#place::before {
+  position: absolute;
+  content: url("../images/Studio_Koukaki-image_place.png");
+}
+
+.anim-clouds h3::after {
+  position: absolute;
+  content: url(../images/big_cloud.png);
+  filter: blur(16px);
+  bottom: 150px;
+  left: 950px;
+}
+.anim-clouds h3::before {
+  position: absolute;
+  content: url(../images/little_cloud.png);
+  filter: blur(16px);
+  top: 60px;
+  left: 730px;
+  width: 142px;
+  height: 55px;
+}
+
+#place h3 {
+  position: relative;
+}
+#place p {
+  position: relative;
+  top: 10px;
+  font-size: 15px;
+  color: black;
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-480px);
+  }
+}
+.anim-clouds h3::before {
+  animation: clouds 2s ease-in-out forwards;
+  transform: translateX();
+}
+.anim-clouds h3::after {
+  animation: clouds 2s ease-in-out forwards;
+  transform: translateX();
+}
+
 /*section nomination oscars*/
 /* Bloc orange*/
 #oscars-id {
@@ -104,6 +155,7 @@
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
+  max-width: 100%;
 }
 
 .oscars-orange {
@@ -126,31 +178,40 @@
   width: 80%;
 }
 
-/*.hidden {
-    content: url(../images/Studio.svg);
-    width: 50%;
-    position: relative;
-    margin: auto;
-    bottom:180px;
+@keyframes move-text {
+  0% {
+    transform: translateY(50%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20%);
+  }
 }
-#studio{
-
-    & > div::before {
-    top: 65%;
-    }
+.background p {
+  animation: move-text 3s ease-in-out forwards;
+  transform: translateY(20px);
 }
 
-#studio{
-&::before {
-    content: url(../images/random_flower.png);
-    position: relative;
-    bottom: 10px;
-    right: 80px;
-    }
-&::after {
-    content: url(../images/flower.png);
-    position: relative;
-    float: right;
-    right: 150px;
-    bottom: 600px;
-  }}*//*# sourceMappingURL=koukaki.css.map */
+.background img {
+  position: relative;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+
+#studio .title {
+  display: none;
+}
+
+.background p {
+  position: absolute;
+  color: white;
+  font-family: quicksand;
+  font-weight: bold;
+  font-size: 62px;
+  margin-left: 18%;
+  top: 10px;
+  color: #FFF5E9;
+}/*# sourceMappingURL=koukaki.css.map */

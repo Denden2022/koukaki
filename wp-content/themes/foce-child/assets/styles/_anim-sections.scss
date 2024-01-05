@@ -1,33 +1,36 @@
 @keyframes down-up {
+        //titre logo et section histoire et studio
 	0% {
+    opacity: 0;
 		transform: translateY(100%);
 	}
-	50% {
+	100% {
+    opacity: 1;
 		transform: translateY(0);
 	}
 }
+
 @media (prefers-reduced-motion: no-preference) {
     .banner img, .story, #studio {
-      //titre logo et section histoire et studio
       animation-name: down-up;
-      animation-duration: 3s;
+      animation-duration: 1500ms;
     }
   }
 
-  @keyframes up-down {
+@keyframes up-down {
+     //image de fond logo
 	0% {
-        opacity: 0;
-		transform: translateY(-30%);
+    opacity: 0;
+		transform: translateY(-100%);
 	}
 	100% {
-        opacity: 1;
+    opacity: 0.3;
 		transform: translateY(0);
 	}
 }
 @media (prefers-reduced-motion: no-preference) {
-    .banner {
-      //image de fond logo
+    #background-video, .banner {
       animation-name: up-down;
-      animation-duration: 2s;
+      animation-duration: 1s;
     }
   }

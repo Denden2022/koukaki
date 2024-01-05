@@ -14,5 +14,5 @@
         <img class="oscars-background" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orange_oscars.png'; ?> " alt="fond couleur Oscars">
         <p class="oscars-text">Fleurs d'oranger & chats errants est nominé aux Oscars Short Film Animated de 2022</p>
     </div> 
-        <img class="oscars-nomination" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/oscars.svg'; ?> " alt="titre Oscars">
+        <img class="oscars-nomination" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/18-courts-metrages.svg'; ?> " alt="titre Oscars">
 </section>

@@ -1,0 +1,27 @@
+@keyframes float-logo {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+.banner img {
+    animation: float-logo 2s ease-in-out infinite;
+    transform: translateY(20px);
+}
+
+//bannière video
+#background-video {
+    position: relative;
+    left: 25%;
+    width: auto;
+    }
+.banner > img {
+    position: relative;
+    right: 50%;
+}

@@ -1,0 +1,27 @@
+/*section nomination oscars*/
+/* Bloc orange*/
+#oscars-id {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 100%;
+}
+.oscars-orange {
+    height: 196px;
+    width: 60%;
+}
+.oscars-background img{
+    position: absolute;
+}
+.oscars-text {
+    position: relative;
+    font-size: 38px;
+    font-weight: 600;
+    font-family: quicksand;
+    color: #FFF5E9;
+    margin-left: 70px;
+    bottom: 280px;
+    width: 80%;
+}

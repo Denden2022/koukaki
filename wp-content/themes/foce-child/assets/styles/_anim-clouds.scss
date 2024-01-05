@@ -1,0 +1,55 @@
+//section place modifié avec ajout nuages
+#place::before {
+    position: absolute;
+    content: url("../images/Studio_Koukaki-image_place.png");
+}
+.anim-clouds {
+    & h3::after {
+    position: absolute;
+    content: url(../images/big_cloud.png);
+    filter: blur(16px);
+    bottom: 150px;
+    left: 950px;
+    }
+    & h3::before {
+    position: absolute;
+    content: url(../images/little_cloud.png);
+    filter: blur(16px);
+    top: 60px;
+    left: 730px;
+    width: 142px;
+    height: 55px;
+}
+}
+#place {
+    & h3 {
+    position: relative;
+    }
+    & p {
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    color: black;
+    }
+}
+
+@keyframes clouds {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(-480px);
+	}
+}
+
+.anim-clouds {
+    & h3::before {
+    animation: clouds 2s ease-in-out forwards;
+    transform: translateX();
+    }
+    & h3::after {
+        animation: clouds 2s ease-in-out forwards;
+        transform: translateX();
+        }
+}
