@@ -1,14 +1,15 @@
 $color-title: #FFF5E9;
 
 //titre Histoire
-@keyframes move-text {
+@keyframes move-text2 {
 	0% {
-	  transform: translateY(50%);
+	  transform: translateY(100%);
 	}
 	100% {
-	  transform: translateY(-50%);
+	  transform: translateY(40%);
 	}
-  }  
+  }
+
 
 .title-story img {
 	position: absolute;
@@ -25,18 +26,18 @@ $color-title: #FFF5E9;
 	font-weight: bold;
 	font-size: 62px;
 	margin-left: 18%;
-	margin-top: 100px;
+	margin-top: 80px;
 	color: $color-title;
-	animation: move-text2 4s ease-in-out forwards;
+	animation: move-text2 2s ease-in-out forwards;
     transform: translateY();
 	}
 }
-.main-character::before {
+/*.title-story::after {
 	position: absolute;
 	content: url(../images/sunflower_leaves.png);
-	left: 80px;
-	top: 150px;
-}
+	left: 50px;
+
+}*/
 .title-story::before {
 	position: absolute;
 	content: url(../images/Sunflower.png);
@@ -45,14 +46,14 @@ $color-title: #FFF5E9;
 }
 
 //titre Studio koukaki
-@keyframes move-text2 {
+@keyframes move-text {
 	0% {
 	  transform: translateY(50%);
 	}
 	100% {
-	  transform: translateY(0);
+	  transform: translateY(-50%);
 	}
-  }
+  }  
 
 @media (prefers-reduced-motion: no-preference){
 .background h4 {

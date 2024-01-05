@@ -5,8 +5,15 @@ function theme_enqueue_styles() {
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_style('koukaki-style', get_stylesheet_directory_uri() . '/assets/styles/koukaki.css');
     wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), 1.1, true);
-
 }
+function enqueue_swiper() {
+    // Add Swiper CSS
+    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
+
+    // Add Swiper JS
+    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_swiper');
 
 
 // Get customizer options form parent theme
