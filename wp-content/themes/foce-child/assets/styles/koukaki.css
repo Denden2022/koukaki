@@ -11,7 +11,7 @@
 #studio h2::before,
 #studio h2::after,
 #place::after,
-.background h3::before,
+.background h4::before,
 .oscars-bloc::before,
 .oscars-bloc::after,
 .site-footer ul::after {
@@ -182,38 +182,55 @@
   0% {
     transform: translateY(50%);
   }
-  50% {
-    transform: translateY(30);
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes move-text2 {
+  0% {
+    transform: translateY(50%);
   }
   100% {
     transform: translateY(0);
   }
 }
-.background h3 {
+.title-story img {
+  position: absolute;
+  width: 25%;
+  height: 200px;
+}
+
+.title-story h1 {
+  position: relative;
+  font-family: quicksand;
+  font-weight: bold;
+  font-size: 62px;
+  margin-left: 18%;
+  color: #FFF5E9;
+  animation: move-text2 2s ease-in-out forwards;
+  transform: translateY();
+}
+
+.background h4 {
   animation: move-text 2s ease-in-out forwards;
-  transform: translateY(20px);
+  transform: translateY(80px);
+  position: absolute;
+  background-image: fixed;
+  font-family: quicksand;
+  font-weight: bold;
+  font-size: 62px;
+  margin-left: 18%;
+  color: #FFF5E9;
 }
 
 .background img {
   position: relative;
-  width: 75%;
+  width: 60%;
   margin: auto;
 }
 
 #studio .title {
   display: none;
-}
-
-.background h3 {
-  position: absolute;
-  background-image: fixed;
-  color: white;
-  font-family: quicksand;
-  font-weight: bold;
-  font-size: 62px;
-  margin-left: 10%;
-  top: 10px;
-  color: #FFF5E9;
 }
 
 #place::after {
@@ -222,8 +239,8 @@
   margin-top: 780px;
 }
 
-.background h3::before {
+.background h4::before {
   position: absolute;
   content: url(../images/flower.png);
-  margin-left: 800px;
+  margin-left: 850px;
 }/*# sourceMappingURL=koukaki.css.map */
