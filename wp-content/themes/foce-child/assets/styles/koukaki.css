@@ -6,13 +6,13 @@
   }
 }
 /*rotation des fleurs*/
-.story h2::after,
+.story::after,
 .story__article::after,
 #studio h2::before,
 #studio h2::after,
-#place::after,
 .title-story::before,
-.background h4::before,
+.anim-titles::before,
+.anim-titles::after,
 .oscars-bloc::before,
 .oscars-bloc::after,
 .site-footer ul::after {
@@ -52,6 +52,57 @@
     animation-duration: 1s;
   }
 }
+/*section nomination oscars*/
+#oscars-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 100%;
+}
+
+.oscars-orange {
+  height: 196px;
+  width: 60%;
+}
+
+.oscars-background img {
+  position: absolute;
+}
+
+.oscars-text {
+  position: relative;
+  font-size: 38px;
+  font-weight: 600;
+  font-family: quicksand;
+  color: #FFF5E9;
+  margin-left: 70px;
+  bottom: 280px;
+  width: 80%;
+}
+
+.site-footer::before {
+  content: none;
+}
+.site-footer::after {
+  content: none;
+}
+
+.oscars-bloc::before {
+  content: url(../images/Sunflower.svg);
+  position: relative;
+  bottom: 100px;
+  left: 60px;
+}
+
+.oscars-bloc::after {
+  content: url(../images/orchid.png);
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+}
+
 @keyframes float-logo {
   0% {
     transform: translateY(0px);
@@ -129,111 +180,71 @@
     transform: translateX();
   }
 }
-/*section nomination oscars*/
-#oscars-id {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  max-width: 100%;
-}
-
-.oscars-orange {
-  height: 196px;
-  width: 60%;
-}
-
-.oscars-background img {
-  position: absolute;
-}
-
-.oscars-text {
-  position: relative;
-  font-size: 38px;
-  font-weight: 600;
-  font-family: quicksand;
-  color: #FFF5E9;
-  margin-left: 70px;
-  bottom: 280px;
-  width: 80%;
-}
-
-.site-footer::before {
-  content: none;
-}
-.site-footer::after {
-  content: none;
-}
-
-.oscars-bloc::before {
-  content: url(../images/Sunflower.svg);
-  position: relative;
-  bottom: 100px;
-  left: 60px;
-}
-
-.oscars-bloc::after {
-  content: url(../images/orchid.png);
-  position: relative;
-  left: 100px;
-  bottom: 100px;
-}
-
 @keyframes move-text2 {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
+    opacity: 1;
     transform: translateY(40%);
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  .title-story h1 {
+    opacity: 0;
+    position: relative;
+    font-family: quicksand;
+    font-weight: bold;
+    font-size: 62px;
+    right: 12%;
+    margin-top: 80px;
+    color: #FFF5E9;
+    transform: translateY();
+  }
+}
+/* Ajouter l'animation lorsque la classe est présente */
+.animate-text-story {
+  animation: move-text2 2s ease-in-out forwards;
+}
+
 .title-story img {
   position: absolute;
   width: 25%;
   height: 350px;
   padding-top: 80px;
   padding-bottom: 120px;
+  right: 580px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .title-story h1 {
-    position: relative;
-    font-family: quicksand;
-    font-weight: bold;
-    font-size: 62px;
-    margin-left: 18%;
-    margin-top: 80px;
-    color: #FFF5E9;
-    animation: move-text2 2s ease-in-out forwards;
-    transform: translateY();
-  }
+.story::before {
+  position: absolute;
+  content: url(../images/sunflower_leaves.png);
+  left: 50px;
+  top: 140px;
 }
-/*.title-story::after {
-	position: absolute;
-	content: url(../images/sunflower_leaves.png);
-	left: 50px;
 
-}*/
-.title-story::before {
+.story::after {
   position: absolute;
   content: url(../images/Sunflower.png);
-  left: 120px;
-  top: 420px;
+  left: 90px;
+  top: 380px;
 }
 
 @keyframes move-text {
   0% {
-    transform: translateY(50%);
+    opacity: 0;
+    transform: translateY(70%);
   }
   100% {
+    opacity: 1;
     transform: translateY(-50%);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   .background h4 {
-    animation: move-text 4s ease-in-out forwards;
-    transform: translateY(80px);
+    opacity: 0;
+    transform: translateY();
     position: absolute;
     background-image: fixed;
     font-family: quicksand;
@@ -243,6 +254,11 @@
     color: #FFF5E9;
   }
 }
+/* Ajouter l'animation lorsque la classe est présente */
+.background h4.animate-text {
+  animation: move-text 2s ease-in-out forwards;
+}
+
 .background img {
   position: relative;
   width: 60%;
@@ -253,14 +269,32 @@
   display: none;
 }
 
-#place::after {
+.anim-titles::before {
   position: absolute;
   content: url(../images/random_flower.png);
-  margin-top: 780px;
+  left: -80px;
 }
 
-.background h4::before {
+.anim-titles::after {
   position: absolute;
   content: url(../images/flower.png);
-  margin-left: 850px;
+  bottom: 220px;
+  right: 80px;
+}
+
+.swiper-container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Style pour les diapositives */
+.swiper-slide {
+  width: auto; /* Ajuste automatiquement la largeur en fonction du contenu */
+  text-align: center;
+}
+
+/* Style pour les images à l'intérieur des diapositives */
+.swiper-slide img {
+  max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de la diapositive */
+  height: auto; /* Pour conserver les proportions de l'image */
 }/*# sourceMappingURL=koukaki.css.map */

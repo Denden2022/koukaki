@@ -1,11 +1,11 @@
 /*rotation des fleurs*/
-.story h2::after, 
+.story::after, 
 .story__article::after, 
 #studio h2::before, 
 #studio h2::after,
-#place::after,
 .title-story::before,
-.background h4::before,
+.anim-titles::before,
+.anim-titles::after,
 .oscars-bloc::before, 
 .oscars-bloc::after, 
 .site-footer ul::after {

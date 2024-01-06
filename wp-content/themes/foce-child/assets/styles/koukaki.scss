@@ -4,12 +4,26 @@
 @import "_anim-sections.scss";
 @import "_anim-video-logo.scss";
 @import "_anim-clouds.scss";
-@import "_section-oscars.scss";
 @import "_anim-titles-purple.scss";
 
 //section des titres en fond bleu histoire et studio
 
+.swiper-container {
+    width: 100%;
+    margin: 20px auto;
+}
 
+/* Style pour les diapositives */
+.swiper-slide {
+    width: auto; /* Ajuste automatiquement la largeur en fonction du contenu */
+    text-align: center;
+}
+
+/* Style pour les images à l'intérieur des diapositives */
+.swiper-slide img {
+    max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de la diapositive */
+    height: auto;   /* Pour conserver les proportions de l'image */
+}
 
 
 
