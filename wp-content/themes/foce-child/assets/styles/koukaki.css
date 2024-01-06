@@ -282,6 +282,49 @@
   right: 80px;
 }
 
+/*Sidenav menu*/
+label, #toggle {
+  display: none;
+}
+
+.close {
+  height: 200px;
+}
+
+.sidenav-class .close {
+  display: none;
+  flex-direction: column;
+  background: #FFF5E9;
+  height: 400px;
+}
+
+.sidenav-class .close {
+  width: 100%;
+}
+
+label {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 40px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+#toggle:checked + .close {
+  display: flex;
+}
+
+.sidenav-class a {
+  font-size: 21px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 30px;
+  left: 500px;
+}
+
 .swiper-container {
   width: 100%;
   margin: 20px auto;

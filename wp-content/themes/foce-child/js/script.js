@@ -1,9 +1,10 @@
-//mouvements des nuages au scroll
-  // Retirer la class
+/**
+ * mouvements des nuages au scroll
+*/
+  // Je cible la class concernée
 const clouds = document.querySelector('.anim-clouds');
-clouds.classList.remove('anim-clouds-scroll');
 
-  // Créer observer à chaque fois que j'observe les nuages donc j'ajoute la class
+  // A chaque fois que j'ajoute la nouvelle class, j'observe les nuages en mouvement
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -16,52 +17,44 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('#place'));
 
-//mouvement des titres sur fond bleu
+/**
+ * mouvement des titres sur fond bleu
+ */
   //titre L'histoire
-  document.addEventListener('DOMContentLoaded', function () {
-    const backgroundStory = document.querySelector('.title-story');
-    const textStory = document.querySelector('.title-story h1');
-    let animationEnabled = false;
+document.addEventListener('DOMContentLoaded', function () {
+  const backgroundStory = document.querySelector('.title-story');
+  const textStory = document.querySelector('.title-story h1');
+  let animationEnabled = false;
   
-    const enableAnimation = () => {
-      if (!animationEnabled) {
+  const enableAnimation = () => {
+    if (!animationEnabled) {
         textStory.classList.add('animate-text-story');
         animationEnabled = true;
-      }
-    };
-  
-    const disableAnimation = () => {
-      // Ne rien faire ici, laissez l'animation continuer
-    };
-  
-    backgroundStory.addEventListener('mouseover', enableAnimation);
-    backgroundStory.addEventListener('mouseout', disableAnimation);
+    }
+  };
+
+  backgroundStory.addEventListener('mouseover', enableAnimation);
   });
 
-
-
   //titre Studio koukaki
-      document.addEventListener('DOMContentLoaded', function () {
-        const background = document.querySelector('#studio .background');
-        const text = document.querySelector('#studio .background h4');
-        let animationEnabled = false;
+document.addEventListener('DOMContentLoaded', function () {
+  const background = document.querySelector('#studio .background');
+  const text = document.querySelector('#studio .background h4');
+  let animationEnabled = false;
       
-        const enableAnimation = () => {
-          if (!animationEnabled) {
-            text.classList.add('animate-text');
-            animationEnabled = true;
-          }
-        };
+  const enableAnimation = () => {
+    if (!animationEnabled) {
+        text.classList.add('animate-text');
+        animationEnabled = true;
+        }
+  };
       
-        const disableAnimation = () => {
-          // Ne rien faire ici, laissez l'animation continuer
-        };
+  background.addEventListener('mouseover', enableAnimation);
+});
       
-        background.addEventListener('mouseover', enableAnimation);
-        background.addEventListener('mouseout', disableAnimation);
-      });
-      
-//swiper effect coverflow sur les personnages
+/**
+ * swiper effect coverflow sur les personnages
+ */
 document.addEventListener('DOMContentLoaded', function() {
   let mySwiper = new mySwiper('.swiper-container', {
     // Options de configuration de Swiper ici
