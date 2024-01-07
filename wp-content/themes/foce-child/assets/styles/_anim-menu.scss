@@ -4,19 +4,20 @@ $color-background-menu: #FFF5E9;
 /*Sidenav menu*/
 label, #toggle {
     display: none;
-}
-.close {
-    height: 200px;
+    position: relative;
+    right: 50px;
+    top: 25px;
 }
 .sidenav-class .close {
+    position: relative;
     display: none;
     flex-direction: column;
     background: $color-background-menu;
-    height: 400px;
+    height: 1000px;
+    margin-top: 60px;
+    padding-top: 50px;
+    font-weight: 400;
 }
-.sidenav-class .close {
-    width: 100%;
-    }
 label {
     width: 130px;
     display: flex;
@@ -30,10 +31,88 @@ label {
 #toggle:checked + .close {
     display: flex;
 }
-.sidenav-class a {
+.sidenav-class .title-menu {
     font-size: 21px;
     font-weight: bold;
     position: absolute;
     bottom: 30px;
     left: 500px;
+}
+.sidenav-class a {
+    position: relative;
+    bottom: 100px;
+}
+.main-navigation ul {
+    flex-direction: column;
+    overflow: hidden;
+    & > li {
+        font-size: 64px;
+        margin-bottom: 50px;
+    }
+}
+
+//mettre le burger en croix quand on rentre dans le menu
+
+// ajouter les images dans le menu burger
+.site-title {
+    padding-bottom: 40px;
+    &::after {
+        content: url(../images/hibiscus_footer.png);
+        position: absolute;
+        left: 450px;
+        top: 580px;
+    }
+}
+.site-studio-down {
+    margin: auto;
+    font-size: 16px;
+}
+.site-story {
+    &::before {
+        content: url(../images/cat-purple.svg);
+        position: absolute;
+        left: -280px;
+        top: -130px;
+    }
+    &::after {
+        content: url(../images/Sunflower.svg);
+        position: absolute;
+        left: 470px;
+        top: -200px;
+    }
+}
+.site-place {
+    &::before {
+        content: url(../images/Flower-multi.svg);
+        position: absolute;
+        right: 500px;
+        bottom: 110px;
+    }
+    &::after {
+        content: url(../images/cat-black.svg);
+        position: absolute;
+        left: 500px;
+        bottom: 30px;
+    }
+}
+.site-characters {
+    &::before {
+        content: url(../images/orchid.png);
+        position: absolute;
+        right: 800px;
+        bottom: 300px;
+    }
+}
+.site-studio {
+    &::before {
+        content: url(../images/cat-orange.svg);
+        position: absolute;
+        right: 760px;
+    }
+    &::after {
+        content: url(../images/random_flower.png);
+        position: absolute;
+        bottom: 300px;
+        left: 850px;
+    }
 }

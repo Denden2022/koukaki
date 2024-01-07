@@ -1,4 +1,4 @@
-/*rotation des fleurs*/
+/*rotation des fleurs page principale*/
 .story::after, 
 .story__article::after, 
 #studio h2::before, 
@@ -8,6 +8,15 @@
 .anim-titles::after,
 .oscars-bloc::before, 
 .oscars-bloc::after, 
-.site-footer ul::after {
-        @include rotateFlowers;
-      }
+.site-footer ul::after,
+//rotation des fleurs du menu burger
+.site-characters::before,
+.site-story::after,
+.site-place::before,
+.site-studio::after,
+.site-title::after
+  {
+    @include rotateFlowers;
+  }
+
+

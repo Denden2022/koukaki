@@ -72,3 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
         })
       });
+
+/**
+ * transformer le burger en croix lorsque l'on rentre dans le menu
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  var sidenav = document.getElementById('sidenav-id');
+  var burgerIcon = document.getElementById('burger-icon');
+
+  burgerIcon.addEventListener('click', function() {
+    sidenav.classList.toggle('open');
+  });
+});
