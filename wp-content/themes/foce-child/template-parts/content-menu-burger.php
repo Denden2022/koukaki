@@ -22,7 +22,7 @@
             <input type="checkbox" id="toggle">
             <div class="close">
             <ul>
-            <li class="site-title"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo-mini.svg'; ?>" <?php echo esc_url( home_url( '/' ) ); ?> rel="home"></a></li>
+            <li class="site-title"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/image-logo.svg'; ?>" <?php echo esc_url( home_url( '/' ) ); ?> rel="home"></a></li>
                 <li class="site-story"><a href="#story">Histoire</a></li>
                 <li class="site-characters"><a href="#characters">Personnages</a></li>
                 <li class="site-place"><a href="#place">Lieu</a></li>

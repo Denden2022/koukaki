@@ -50,6 +50,9 @@ label {
         margin-bottom: 50px;
     }
 }
+.main-navigation a:hover {
+    text-shadow: 10px 0px 10px rgb(255, 92, 0, 0.8) ;
+}
 
 //mettre le burger en croix quand on rentre dans le menu
 
@@ -68,11 +71,13 @@ label {
     font-size: 16px;
 }
 .site-story {
+    margin-top: 50px;
     &::before {
         content: url(../images/cat-purple.svg);
         position: absolute;
         left: -280px;
         top: -130px;
+        @include floatElement;
     }
     &::after {
         content: url(../images/Sunflower.svg);
@@ -93,13 +98,14 @@ label {
         position: absolute;
         left: 500px;
         bottom: 30px;
+        @include floatElement;
     }
 }
 .site-characters {
     &::before {
         content: url(../images/orchid.png);
         position: absolute;
-        right: 800px;
+        right: 830px;
         bottom: 300px;
     }
 }
@@ -108,11 +114,12 @@ label {
         content: url(../images/cat-orange.svg);
         position: absolute;
         right: 760px;
+        @include floatElement;
     }
     &::after {
-        content: url(../images/random_flower.png);
+        content: url(../images/random_flower-little.png);
         position: absolute;
-        bottom: 300px;
-        left: 850px;
+        bottom: 370px;
+        left: 930px;
     }
 }

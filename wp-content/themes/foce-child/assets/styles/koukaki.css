@@ -3,6 +3,18 @@
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 /*rotation des fleurs page principale*/
@@ -23,6 +35,7 @@
 .site-title::after {
   /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
   animation: rotateAnimation 20s linear infinite;
+  transform-origin: center;
 }
 
 @keyframes down-up {
@@ -108,19 +121,9 @@
   bottom: 100px;
 }
 
-@keyframes float-logo {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 .banner img {
-  animation: float-logo 2s ease-in-out infinite;
+  /* Flottement des éléments*/
+  animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
 }
 
@@ -343,6 +346,10 @@ label {
   margin-bottom: 50px;
 }
 
+.main-navigation a:hover {
+  text-shadow: 10px 0px 10px rgba(255, 92, 0, 0.8);
+}
+
 .site-title {
   padding-bottom: 40px;
 }
@@ -358,11 +365,17 @@ label {
   font-size: 16px;
 }
 
+.site-story {
+  margin-top: 50px;
+}
 .site-story::before {
   content: url(../images/cat-purple.svg);
   position: absolute;
   left: -280px;
   top: -130px;
+  /* Flottement des éléments*/
+  animation: floatAnimation 2s ease-in-out infinite;
+  transform: translateY(20px);
 }
 .site-story::after {
   content: url(../images/Sunflower.svg);
@@ -382,12 +395,15 @@ label {
   position: absolute;
   left: 500px;
   bottom: 30px;
+  /* Flottement des éléments*/
+  animation: floatAnimation 2s ease-in-out infinite;
+  transform: translateY(20px);
 }
 
 .site-characters::before {
   content: url(../images/orchid.png);
   position: absolute;
-  right: 800px;
+  right: 830px;
   bottom: 300px;
 }
 
@@ -395,12 +411,15 @@ label {
   content: url(../images/cat-orange.svg);
   position: absolute;
   right: 760px;
+  /* Flottement des éléments*/
+  animation: floatAnimation 2s ease-in-out infinite;
+  transform: translateY(20px);
 }
 .site-studio::after {
-  content: url(../images/random_flower.png);
+  content: url(../images/random_flower-little.png);
   position: absolute;
-  bottom: 300px;
-  left: 850px;
+  bottom: 370px;
+  left: 930px;
 }
 
 .swiper-container {
