@@ -34,43 +34,49 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   backgroundStory.addEventListener('mouseover', enableAnimation);
+  
   });
 
   //titre Studio koukaki
-document.addEventListener('DOMContentLoaded', function () {
-  const background = document.querySelector('#studio .background');
-  const text = document.querySelector('#studio .background h4');
-  let animationEnabled = false;
-      
-  const enableAnimation = () => {
+const background = document.querySelector('#studio .background');
+const text = document.querySelector('#studio .background h4');
+let animationEnabled = false;
+
+const enableAnimation = () => {
     if (!animationEnabled) {
         text.classList.add('animate-text');
         animationEnabled = true;
-        }
-  };
-      
-  background.addEventListener('mouseover', enableAnimation);
-});
-      
+    }
+};
+
+const disableAnimation = () => {
+    if (animationEnabled) {
+        text.classList.remove('animate-text');
+        animationEnabled = false;
+    }
+};
+
+background.addEventListener('mouseover', enableAnimation);
+background.addEventListener('mouseout', disableAnimation);
+
 /**
  * swiper effect coverflow sur les personnages
  */
-document.addEventListener('DOMContentLoaded', function() {
-  let mySwiper = new Swiper('.mySwiper', {
-    // Options de configuration de Swiper ici
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 3,
-        coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-    }
-        })
-      });
+document.addEventListener('DOMContentLoaded', function () {
+var mySwiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 3,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+});
+});
 
 /**
  * transformer le burger en croix lorsque l'on rentre dans le menu

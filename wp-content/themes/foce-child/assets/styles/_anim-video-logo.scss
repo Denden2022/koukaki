@@ -5,12 +5,15 @@
 
 //bannière video
 #background-video {
-    position: relative;
-    left: 25%;
-    width: auto;
-
+    position: absolute;
+    width: max-content;
     }
 .banner > img {
     position: relative;
-    right: 50%;
+    right: 5%;
+}
+@media (min-width:400px) and (max-width:1440px) {
+    #background-video, #place::before {
+        right: 0.01px;
+        }
 }

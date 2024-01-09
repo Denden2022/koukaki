@@ -12,11 +12,12 @@
 <nav id="site-navigation" class="main-navigation">
     <div id="sidenav-id" class="sidenav-class">
         <label for="toggle" >
+            <!--
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="burger-icon">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
-            </button>
+            </button>-->
                 <img id="burgerIcon" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Burger.svg'; ?>" alt="<?php echo 'burger'; ?> "onclick="toggleBurger()">
             </label>
             

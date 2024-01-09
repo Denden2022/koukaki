@@ -126,16 +126,21 @@
 }
 
 #background-video {
-  position: relative;
-  left: 25%;
-  width: auto;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .banner > img {
   position: relative;
-  right: 50%;
+  right: 5%;
 }
 
+@media (min-width: 400px) and (max-width: 1440px) {
+  #background-video, #place::before {
+    right: 0.01px;
+  }
+}
 #place::before {
   position: absolute;
   content: url("../images/Studio_Koukaki-image_place.png");
@@ -429,33 +434,32 @@ label {
   left: 930px;
 }
 
-.swiper-wrapper {
+.main-character {
   position: relative;
   height: 100%;
 }
 
-.swiper-wrapper {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+.main-character {
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
 }
 
-.swiper-wrapper {
+.mySwiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.swiper-wraper {
+.swiper-slide {
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
 }
 
-.swiper-wrapper figure {
+.swiper-slide img {
   display: block;
   width: 100%;
 }/*# sourceMappingURL=koukaki.css.map */
