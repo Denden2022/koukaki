@@ -14,7 +14,7 @@
 .site-story::after,
 .site-place::before,
 .site-studio::after,
-.site-title::after
+.close p::after
   {
     @include rotateFlowers;
   }

@@ -3,7 +3,6 @@
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
-    transform-origin: center;
   }
 }
 @keyframes floatAnimation {
@@ -32,10 +31,9 @@
 .site-story::after,
 .site-place::before,
 .site-studio::after,
-.site-title::after {
+.close p::after {
   /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
   animation: rotateAnimation 20s linear infinite;
-  transform-origin: center;
 }
 
 @keyframes down-up {
@@ -304,7 +302,7 @@ label, #toggle {
   flex-direction: column;
   background: #FFF5E9;
   height: 1000px;
-  margin-top: 60px;
+  margin-top: 48px;
   padding-top: 50px;
   font-weight: 400;
 }
@@ -346,23 +344,32 @@ label {
   margin-bottom: 50px;
 }
 
-.main-navigation a:hover {
+.main-navigation li a:hover {
   text-shadow: 10px 0px 10px rgba(255, 92, 0, 0.8);
 }
 
-.site-title {
-  padding-bottom: 40px;
-}
-.site-title::after {
-  content: url(../images/hibiscus_footer.png);
-  position: absolute;
-  left: 450px;
-  top: 580px;
+/* Icône burger */
+/*.burger-icon .line {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }*/
+/* Icône croix */
+.active-icon {
+  content: url(../images/close.png);
 }
 
-.site-studio-down {
+.site-studio-down p {
   margin: auto;
   font-size: 16px;
+}
+.site-studio-down p::after {
+  content: url(../images/hibiscus_footer.png);
+  position: absolute;
+  top: -220px;
+  right: -980px;
 }
 
 .site-story {
@@ -422,19 +429,33 @@ label {
   left: 930px;
 }
 
-.swiper-container {
+.swiper-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-wrapper {
   width: 100%;
-  margin: 20px auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-/* Style pour les diapositives */
-.swiper-slide {
-  width: auto; /* Ajuste automatiquement la largeur en fonction du contenu */
-  text-align: center;
+.swiper-wraper {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
-/* Style pour les images à l'intérieur des diapositives */
-.swiper-slide img {
-  max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de la diapositive */
-  height: auto; /* Pour conserver les proportions de l'image */
+.swiper-wrapper figure {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=koukaki.css.map */

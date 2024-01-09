@@ -14,7 +14,7 @@ label, #toggle {
     flex-direction: column;
     background: $color-background-menu;
     height: 1000px;
-    margin-top: 60px;
+    margin-top: 48px;
     padding-top: 50px;
     font-weight: 400;
 }
@@ -50,25 +50,37 @@ label {
         margin-bottom: 50px;
     }
 }
-.main-navigation a:hover {
+
+//mettre la liste du menu en fond orange au survol
+.main-navigation li a:hover {
     text-shadow: 10px 0px 10px rgb(255, 92, 0, 0.8) ;
 }
 
 //mettre le burger en croix quand on rentre dans le menu
+/* Icône burger */
+/*.burger-icon .line {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }*/
+
+/* Icône croix */
+.active-icon {
+    content: url(../images/close.png);
+}
 
 // ajouter les images dans le menu burger
-.site-title {
-    padding-bottom: 40px;
+.site-studio-down p {
+    margin: auto;
+    font-size: 16px;
     &::after {
         content: url(../images/hibiscus_footer.png);
         position: absolute;
-        left: 450px;
-        top: 580px;
-    }
+        top: -220px;
+        right: -980px;
 }
-.site-studio-down {
-    margin: auto;
-    font-size: 16px;
 }
 .site-story {
     margin-top: 50px;

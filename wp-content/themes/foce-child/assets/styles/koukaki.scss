@@ -8,25 +8,33 @@
 @import "_anim-menu.scss";
 
 //swiper des personnages
-.swiper-container {
-    width: 100%;
-    margin: 20px auto;
+.swiper-wrapper {
+  position: relative;
+  height: 100%;
 }
 
-/* Style pour les diapositives */
-.swiper-slide {
-    width: auto; /* Ajuste automatiquement la largeur en fonction du contenu */
-    text-align: center;
+.swiper-wrapper {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style pour les images à l'intérieur des diapositives */
-.swiper-slide img {
-    max-width: 100%; /* Pour assurer que l'image ne dépasse pas la largeur de la diapositive */
-    height: auto;   /* Pour conserver les proportions de l'image */
+.swiper-wrapper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
+.swiper-wraper {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
 
-
-
-
-
+.swiper-wrapper figure {
+  display: block;
+  width: 100%;
+}

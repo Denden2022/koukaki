@@ -1,6 +1,6 @@
 /**
  * mouvements des nuages au scroll
-*/
+ */
   // Je cible la class concernée
 const clouds = document.querySelector('.anim-clouds');
 
@@ -22,7 +22,7 @@ observer.observe(document.querySelector('#place'));
  */
   //titre L'histoire
 document.addEventListener('DOMContentLoaded', function () {
-  const backgroundStory = document.querySelector('.title-story');
+  const backgroundStory = document.querySelector('.story');
   const textStory = document.querySelector('.title-story h1');
   let animationEnabled = false;
   
@@ -56,10 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
  * swiper effect coverflow sur les personnages
  */
 document.addEventListener('DOMContentLoaded', function() {
-  let mySwiper = new mySwiper('.swiper-container', {
+  let mySwiper = new Swiper('.mySwiper', {
     // Options de configuration de Swiper ici
         effect: 'coverflow',
-        direction: 'horizontal',
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 3,
@@ -76,11 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  * transformer le burger en croix lorsque l'on rentre dans le menu
  */
-document.addEventListener('DOMContentLoaded', function() {
-  var sidenav = document.getElementById('sidenav-id');
-  var burgerIcon = document.getElementById('burger-icon');
+  function toggleBurger() {
+    var burgerIcon = document.getElementById('burgerIcon');
+    var crossIcon = document.getElementById('crossIcon');
 
-  burgerIcon.addEventListener('click', function() {
-    sidenav.classList.toggle('open');
-  });
-});
+    // Vérifie si l'image du burger est actuellement active
+    if (burgerIcon.classList.contains('active-icon')) {
+      // Désactive l'image du burger et active l'image de la croix
+        burgerIcon.classList.remove('active-icon');
+        crossIcon.classList.add('active-icon');
+    } else {
+      // Désactive l'image de la croix et active l'image du burger
+        burgerIcon.classList.add('active-icon');
+        crossIcon.classList.remove('active-icon');
+    }
+}

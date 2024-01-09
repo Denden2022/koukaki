@@ -1,13 +1,12 @@
 @mixin rotateFlowers {
     /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
     animation: rotateAnimation 20s linear infinite;
-    transform-origin: center;
 }
 
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
-    transform-origin: center;
+
   }
 }
 
