@@ -12,8 +12,7 @@
 <nav id="site-navigation" class="main-navigation">
     <div id="sidenav-id" class="sidenav-class">
         <label for="toggle" >
-            <!--
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="burger-icon">
+            <!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="burger-icon">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>

@@ -129,6 +129,7 @@
   position: absolute;
   width: -moz-max-content;
   width: max-content;
+  background-attachment: fixed;
 }
 
 .banner > img {
@@ -136,6 +137,23 @@
   right: 5%;
 }
 
+@keyframes float-title {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .anim-title-video {
+    transform: translate(-50%, -50%);
+    animation: float-title 2s ease-in-out infinite;
+  }
+}
 @media (min-width: 400px) and (max-width: 1440px) {
   #background-video, #place::before {
     right: 0.01px;

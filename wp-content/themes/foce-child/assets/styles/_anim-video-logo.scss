@@ -3,17 +3,22 @@
 	@include floatElement;
 }
 
+//parallax du titre et de la vidéo
+.anim-title-video {
+  @include anim-parallax-video;
+}
+
 //bannière video
 #background-video {
     position: absolute;
     width: max-content;
+    background-attachment: fixed;
     }
 .banner > img {
     position: relative;
     right: 5%;
 }
-@media (min-width:400px) and (max-width:1440px) {
-    #background-video, #place::before {
-        right: 0.01px;
-        }
-}
+
+
+
+

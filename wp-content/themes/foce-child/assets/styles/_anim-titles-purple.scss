@@ -1,18 +1,6 @@
 $color-title: #FFF5E9;
 
 //titre Histoire
-@keyframes move-text2 {
-	0% {
-	  opacity: 0;
-	  transform: translateY(100%);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(40%);
-	}
-  }
-
-@media (prefers-reduced-motion: no-preference){
 .title-story h1{
 	opacity: 0;
 	position: relative;
@@ -22,12 +10,10 @@ $color-title: #FFF5E9;
 	right: 12%;
 	margin-top: 80px;
 	color: $color-title;
-    transform: translateY();
 	}
-}
- /* Ajouter l'animation lorsque la classe est présente */
+ /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
 .animate-text-story {
-    animation: move-text2 2s ease-in-out forwards;
+    @include anim-title-story;
 }
 
 .title-story img {
@@ -53,22 +39,9 @@ $color-title: #FFF5E9;
 	top: 380px;
 }
 
-//titre Studio koukaki
-@keyframes move-text {
-	0% {
-	  opacity: 0;
-	  transform: translateY(70%);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(-50%);
-	}
-  }  
-
-@media (prefers-reduced-motion: no-preference){
+//animation titre Studio koukaki
 .background h4 {
 	opacity: 0;
-    transform: translateY();
 	position: absolute;
 	background-image: fixed;
 	font-family: quicksand;
@@ -77,11 +50,10 @@ $color-title: #FFF5E9;
 	margin-left: 18%;
 	color: $color-title;
 	}
-}
 
- /* Ajouter l'animation lorsque la classe est présente */
+ /* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
  .background h4.animate-text {
-    animation: move-text 2s ease-in-out forwards;
+    @include anim-title-studio;
   }
 
 .background img {

@@ -33,25 +33,12 @@
     }
 }
 
-@keyframes clouds {
-	0% {
-		transform: translateX(0px);
-	}
-
-	100% {
-		transform: translateX(-480px);
-	}
-}
-
-@media (prefers-reduced-motion: no-preference) {
+//mouvement des nuages
 .anim-clouds-scroll {
     & h3::before {
-    animation: clouds 2s ease-in-out forwards;
-    transform: translateX();
+    @include clouds-move;
     }
     & h3::after {
-        animation: clouds 2s ease-in-out forwards;
-        transform: translateX();
-        }
-    }
+    @include clouds-move;   
+}
 }

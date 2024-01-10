@@ -1,0 +1,7 @@
+@media (min-width:400px) and (max-width:1440px) {
+    #background-video,
+    #place::before 
+    {
+        right: none;
+        }
+}

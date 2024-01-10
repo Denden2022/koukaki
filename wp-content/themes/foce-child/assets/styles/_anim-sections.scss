@@ -1,39 +1,12 @@
-@keyframes down-up {
-        //titre logo et section histoire et studio
-	0% {
-    opacity: 0;
-		transform: translateY(100%);
-	}
-	100% {
-    opacity: 1;
-		transform: translateY(0);
-	}
+//animation du bas vers le haut de la section histoire et studio vers la video
+.story, #studio {
+  @include anim-purpleTitle-video
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .banner img, .story, #studio {
-      animation-name: down-up;
-      animation-duration: 1500ms;
-    }
-  }
-
-@keyframes up-down {
-     //image de fond logo
-	0% {
-    opacity: 0;
-		transform: translateY(-100%);
-	}
-	100% {
-    opacity: 0.3;
-		transform: translateY(0);
-	}
+// animation du haut vers le bas de la video avec la section histoire et studio
+#background-video, .banner {
+  @include anim-video-purpleTitle
 }
-@media (prefers-reduced-motion: no-preference) {
-    #background-video, .banner {
-      animation-name: up-down;
-      animation-duration: 1s;
-    }
-  }
 
   /*section nomination oscars*/
 #oscars-id {

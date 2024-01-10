@@ -1,21 +1,113 @@
-@mixin rotateFlowers {
-    /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
-    animation: rotateAnimation 20s linear infinite;
+@mixin anim-purpleTitle-video {
+//animation du bas vers le haut de la section histoire et studio vers la video
+	animation-name: down-up;
+	animation-duration: 1500ms;
+}
+@keyframes down-up {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+		}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		}
 }
 
+@mixin anim-video-PurpleTitle{
+// animation du haut vers le bas de la video avec la section histoire et studio
+	animation-name: up-down;
+	animation-duration: 1s;
+}
+@keyframes up-down {
+   0% {
+   		opacity: 0;
+	   	transform: translateY(-100%);
+   }
+   100% {
+   		opacity: 0.3;
+	   	transform: translateY(0);
+   }
+}
+
+@mixin anim-parallax-video {
+//parallax titre et video
+	transform: translate(-50%, -50%);
+	animation: float-title 2s ease-in-out infinite
+}
+@keyframes float-title {
+	0% {
+		transform: translateY(0);
+		}
+	50% {
+		transform: translateY(-20px);
+		}
+	100% {
+		transform: translateY(0);
+		}
+}
+
+@mixin anim-title-story {
+//animation du titre Histoire sur fond violet
+    animation: move-text2 2s ease-in-out forwards;
+	transform: translateY();
+}
+@keyframes move-text2 {
+	0% {
+	  opacity: 0;
+	  transform: translateY(100%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(40%);
+	}
+  }
+  
+//animation du titre Studio koukaki sur fond violet
+@mixin anim-title-studio {
+/* Ajouter l'animation au titre studio koukaki lorsque la classe est présente */
+	animation: move-text 2s ease-in-out forwards;
+}
+@keyframes move-text {
+	0% {
+	  opacity: 0;
+	  transform: translateY(70%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(-50%);
+	}
+}  
+ 
+@mixin clouds-move {
+//nuages en mouvement de droite vers la gauche
+    animation: clouds 2s ease-in-out forwards;
+    transform: translateX();
+}
+@keyframes clouds {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(-480px);
+	}
+}
+
+@mixin rotateFlowers {
+// Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes
+	animation: rotateAnimation 20s linear infinite;
+}
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
-
-  }
+  	}
 }
 
 @mixin floatElement {
-  /* Flottement des éléments*/
-  animation: floatAnimation 2s ease-in-out infinite;
-  transform: translateY(20px);
+//Flottement des éléments
+	animation: floatAnimation 2s ease-in-out infinite;
+	transform: translateY(20px);
 }
-
 @keyframes floatAnimation {
 	0% {
 		transform: translateY(0px);
@@ -27,3 +119,7 @@
 		transform: translateY(0px);
 	}
 }
+
+
+
+

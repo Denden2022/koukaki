@@ -4,15 +4,14 @@
     height: 100%;
   }
   
-  .main-character {
-    
+ .main-character {
     font-size: 14px;
     color: #000;
     margin: 0;
     padding: 0;
   }
   
-  .mySwiper {
+  .swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -23,9 +22,9 @@
     background-size: cover;
     width: 300px;
     height: 300px;
+    & img {
+      display: block;
+      width: 10%;
+    }
   }
   
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-  }

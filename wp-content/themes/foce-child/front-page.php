@@ -8,17 +8,19 @@ get_header();
             <video id="background-video" autoplay loop muted>
                 <source src="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DWP+IW_P9+Studio+d'animation/Studio+Koukaki-vide%CC%81o+header+sans+son+(1).mp4" type="video/mp4">
             </video>
-            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img class="parallax-title" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
 
-        <section id="#story" class="story">
+        <section id="story" class="story">
             <div class="title-story">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/purple_studio_bg.png'; ?>" alt="Background Image">
                 <h1>L'histoire</h1>
             </div>
-            
+            <article id="swiper" class="story__article">
+                <p><?php echo get_theme_mod('story'); ?></p>
+            </article>
             <!--Template des personnages-->
-            <?php get_template_part( 'template-parts/content-characters' ); ?>
+            <?php get_template_part( 'template-parts/content-characters copy' ); ?>
             
             <article id="place" class="anim-clouds">
                 <div>

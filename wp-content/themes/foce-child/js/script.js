@@ -1,7 +1,24 @@
 /**
+ * effet parallax sur le titre de la vidéo
+ */
+const parallaxTitleVideo = document.querySelector('.parallax-title');
+
+  // A chaque fois que j'ajoute la nouvelle class, j'observe les nuages en mouvement
+const see = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      parallaxTitleVideo.classList.add('anim-title-video');
+      return;
+    }
+      clouds.classList.remove('anim-title-video');
+  });
+});
+
+
+/**
  * mouvements des nuages au scroll
  */
-  // Je cible la class concernée
+ // Je cible la class concernée
 const clouds = document.querySelector('.anim-clouds');
 
   // A chaque fois que j'ajoute la nouvelle class, j'observe les nuages en mouvement
@@ -16,6 +33,24 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector('#place'));
+
+/*animation story au scroll
+  // Je cible la class concernée
+  const titleStory = document.querySelector('.story');
+
+  // A chaque fois que j'ajoute la nouvelle class, j'observe le titre story au scroll
+const seeStory = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      titleStory.classList.add('anim-story-scroll');
+      return;
+    }
+      titleStory.classList.remove('anim-story-scroll');
+  });
+});
+
+seeStory.observe(document.querySelector('#story'));*/
+
 
 /**
  * mouvement des titres sur fond bleu
@@ -62,12 +97,11 @@ background.addEventListener('mouseout', disableAnimation);
 /**
  * swiper effect coverflow sur les personnages
  */
-document.addEventListener('DOMContentLoaded', function () {
-var mySwiper = new Swiper(".mySwiper", {
+const mySwiper = new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: "auto",
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -75,7 +109,6 @@ var mySwiper = new Swiper(".mySwiper", {
     modifier: 1,
     slideShadows: true,
   },
-});
 });
 
 /**
