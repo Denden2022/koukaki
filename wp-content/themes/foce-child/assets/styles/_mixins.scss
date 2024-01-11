@@ -14,7 +14,7 @@
 		}
 }
 
-@mixin anim-video-PurpleTitle{
+@mixin anim-video-purpleTitle{
 // animation du haut vers le bas de la video avec la section histoire et studio
 	animation-name: up-down;
 	animation-duration: 1s;
@@ -33,9 +33,9 @@
 @mixin anim-parallax-video {
 //parallax titre et video
 	transform: translate(-50%, -50%);
-	animation: float-title 2s ease-in-out infinite
+	animation: parallax-title 2s ease-in-out infinite
 }
-@keyframes float-title {
+@keyframes parallax-title {
 	0% {
 		transform: translateY(0);
 		}
@@ -89,7 +89,7 @@
 		transform: translateX(0px);
 	}
 	100% {
-		transform: translateX(-480px);
+		transform: translateX(-300px);
 	}
 }
 

@@ -4,16 +4,16 @@
 const parallaxTitleVideo = document.querySelector('.parallax-title');
 
   // A chaque fois que j'ajoute la nouvelle class, j'observe les nuages en mouvement
-const see = new IntersectionObserver(entries => {
+const seeParallax = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      parallaxTitleVideo.classList.add('anim-title-video');
+      parallaxTitleVideo.classList.add('anim-parallax-video');
       return;
     }
-      clouds.classList.remove('anim-title-video');
+      parallaxTitleVideo.classList.remove('anim-parallax-video');
   });
 });
-
+seeParallax.observe(document.querySelector('#background-video'));
 
 /**
  * mouvements des nuages au scroll
@@ -101,13 +101,13 @@ const mySwiper = new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",
+  slidesPerView: 3,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: false,
   },
 });
 

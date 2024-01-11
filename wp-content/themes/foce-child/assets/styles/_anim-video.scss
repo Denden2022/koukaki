@@ -1,6 +1,7 @@
 //flottement du logo
 .banner img {
 	@include floatElement;
+  @include anim-video-purpleTitle;
 }
 
 //parallax du titre et de la vidéo
@@ -16,7 +17,7 @@
     }
 .banner > img {
     position: relative;
-    right: 5%;
+    right: 15%;
 }
 
 

@@ -18,9 +18,10 @@ get_header();
             </div>
             <article id="swiper" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
-            </article>
+            </article> 
+
             <!--Template des personnages-->
-            <?php get_template_part( 'template-parts/content-characters copy' ); ?>
+            <?php get_template_part( 'template-parts/content-characters' ); ?>
             
             <article id="place" class="anim-clouds">
                 <div>

@@ -1,5 +1,64 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@keyframes down-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes up-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+}
+@keyframes parallax-title {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move-text2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(40%);
+  }
+}
+@keyframes move-text {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+@keyframes clouds {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-300px);
+  }
+}
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
@@ -32,42 +91,19 @@
 .site-place::before,
 .site-studio::after,
 .close p::after {
-  /* Rotation continue de 360 degrés dans le sens des aiguilles d'une montre pendant 20 secondes */
   animation: rotateAnimation 20s linear infinite;
 }
 
-@keyframes down-up {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.story, #studio {
+  animation-name: down-up;
+  animation-duration: 1500ms;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .banner img, .story, #studio {
-    animation-name: down-up;
-    animation-duration: 1500ms;
-  }
+
+#background-video, .banner {
+  animation-name: up-down;
+  animation-duration: 1s;
 }
-@keyframes up-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 0.3;
-    transform: translateY(0);
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  #background-video, .banner {
-    animation-name: up-down;
-    animation-duration: 1s;
-  }
-}
+
 /*section nomination oscars*/
 #oscars-id {
   display: flex;
@@ -120,9 +156,15 @@
 }
 
 .banner img {
-  /* Flottement des éléments*/
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
+  animation-name: up-down;
+  animation-duration: 1s;
+}
+
+.anim-title-video {
+  transform: translate(-50%, -50%);
+  animation: parallax-title 2s ease-in-out infinite;
 }
 
 #background-video {
@@ -134,31 +176,9 @@
 
 .banner > img {
   position: relative;
-  right: 5%;
+  right: 15%;
 }
 
-@keyframes float-title {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .anim-title-video {
-    transform: translate(-50%, -50%);
-    animation: float-title 2s ease-in-out infinite;
-  }
-}
-@media (min-width: 400px) and (max-width: 1440px) {
-  #background-video, #place::before {
-    right: 0.01px;
-  }
-}
 #place::before {
   position: absolute;
   content: url("../images/Studio_Koukaki-image_place.png");
@@ -191,50 +211,30 @@
   color: black;
 }
 
-@keyframes clouds {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-480px);
-  }
+.anim-clouds-scroll h3::before {
+  animation: clouds 2s ease-in-out forwards;
+  transform: translateX();
 }
-@media (prefers-reduced-motion: no-preference) {
-  .anim-clouds-scroll h3::before {
-    animation: clouds 2s ease-in-out forwards;
-    transform: translateX();
-  }
-  .anim-clouds-scroll h3::after {
-    animation: clouds 2s ease-in-out forwards;
-    transform: translateX();
-  }
+.anim-clouds-scroll h3::after {
+  animation: clouds 2s ease-in-out forwards;
+  transform: translateX();
 }
-@keyframes move-text2 {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(40%);
-  }
+
+.title-story h1 {
+  opacity: 0;
+  position: relative;
+  font-family: quicksand;
+  font-weight: bold;
+  font-size: 62px;
+  right: 12%;
+  margin-top: 80px;
+  color: #FFF5E9;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .title-story h1 {
-    opacity: 0;
-    position: relative;
-    font-family: quicksand;
-    font-weight: bold;
-    font-size: 62px;
-    right: 12%;
-    margin-top: 80px;
-    color: #FFF5E9;
-    transform: translateY();
-  }
-}
-/* Ajouter l'animation lorsque la classe est présente */
+
+/* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
 .animate-text-story {
   animation: move-text2 2s ease-in-out forwards;
+  transform: translateY();
 }
 
 .title-story img {
@@ -260,31 +260,20 @@
   top: 380px;
 }
 
-@keyframes move-text {
-  0% {
-    opacity: 0;
-    transform: translateY(70%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
+.background h4 {
+  opacity: 0;
+  position: absolute;
+  background-image: fixed;
+  font-family: quicksand;
+  font-weight: bold;
+  font-size: 62px;
+  margin-left: 18%;
+  color: #FFF5E9;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .background h4 {
-    opacity: 0;
-    transform: translateY();
-    position: absolute;
-    background-image: fixed;
-    font-family: quicksand;
-    font-weight: bold;
-    font-size: 62px;
-    margin-left: 18%;
-    color: #FFF5E9;
-  }
-}
-/* Ajouter l'animation lorsque la classe est présente */
+
+/* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
 .background h4.animate-text {
+  /* Ajouter l'animation au titre studio koukaki lorsque la classe est présente */
   animation: move-text 2s ease-in-out forwards;
 }
 
@@ -371,7 +360,6 @@ label {
   text-shadow: 10px 0px 10px rgba(255, 92, 0, 0.8);
 }
 
-/* Icône burger */
 /*.burger-icon .line {
     display: block;
     width: 35px;
@@ -379,7 +367,6 @@ label {
     background-color: black;
     margin: 6px 0;
   }*/
-/* Icône croix */
 .active-icon {
   content: url(../images/close.png);
 }
@@ -403,7 +390,6 @@ label {
   position: absolute;
   left: -280px;
   top: -130px;
-  /* Flottement des éléments*/
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
 }
@@ -425,7 +411,6 @@ label {
   position: absolute;
   left: 500px;
   bottom: 30px;
-  /* Flottement des éléments*/
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
 }
@@ -441,7 +426,6 @@ label {
   content: url(../images/cat-orange.svg);
   position: absolute;
   right: 760px;
-  /* Flottement des éléments*/
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
 }
@@ -464,8 +448,8 @@ label {
   padding: 0;
 }
 
-.mySwiper {
-  width: 100%;
+.swiper {
+  width: 50%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -476,8 +460,14 @@ label {
   width: 300px;
   height: 300px;
 }
-
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 10%;
+}
+
+@media (min-width: 400px) and (max-width: 1440px) {
+  #background-video,
+  #place::before {
+    right: none;
+  }
 }/*# sourceMappingURL=koukaki.css.map */
