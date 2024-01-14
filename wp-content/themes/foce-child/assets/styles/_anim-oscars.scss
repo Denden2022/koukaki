@@ -18,8 +18,8 @@
   max-width: 100%;
 }
 .oscars-orange {
-  height: 196px;
-  width: 60%;
+  height: 12em;
+  width: 80em;
 }
 .oscars-background img{
   position: absolute;
@@ -30,9 +30,9 @@
   font-weight: 600;
   font-family: quicksand;
   color: #FFF5E9;
-  margin-left: 70px;
-  bottom: 280px;
-  width: 80%;
+  margin-left: 2em;
+  bottom: 7em;
+  width: 16em;
 }
 .site-footer{
   &::before {
@@ -53,3 +53,6 @@
   left: 100px;
   bottom: 100px;
 }
+
+
+

@@ -22,33 +22,37 @@
 }
 @keyframes parallax-title {
   0% {
-    transform: translateY(0);
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
   }
   50% {
     transform: translateY(-20px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 }
 @keyframes move-text2 {
   0% {
-    opacity: 0;
     transform: translateY(100%);
   }
   100% {
-    opacity: 1;
-    transform: translateY(40%);
+    transform: translateY(30%);
   }
 }
 @keyframes move-text {
   0% {
-    opacity: 0;
-    transform: translateY(70%);
+    transform: translateY(10%);
   }
   100% {
-    opacity: 1;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
   }
 }
 @keyframes clouds {
@@ -62,17 +66,6 @@
 @keyframes rotateAnimation {
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes floatAnimation {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 /*rotation des fleurs page principale*/
@@ -115,8 +108,8 @@
 }
 
 .oscars-orange {
-  height: 196px;
-  width: 60%;
+  height: 12em;
+  width: 80em;
 }
 
 .oscars-background img {
@@ -129,9 +122,9 @@
   font-weight: 600;
   font-family: quicksand;
   color: #FFF5E9;
-  margin-left: 70px;
-  bottom: 280px;
-  width: 80%;
+  margin-left: 2em;
+  bottom: 7em;
+  width: 16em;
 }
 
 .site-footer::before {
@@ -158,25 +151,19 @@
 .banner img {
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
-  animation-name: up-down;
-  animation-duration: 1s;
 }
 
-.anim-title-video {
-  transform: translate(-50%, -50%);
-  animation: parallax-title 2s ease-in-out infinite;
+.parallax-title {
+  transform: translateY();
+  animation: parallax-title 5s ease-in-out forwards;
 }
 
 #background-video {
   position: absolute;
-  width: -moz-max-content;
-  width: max-content;
-  background-attachment: fixed;
 }
 
 .banner > img {
   position: relative;
-  right: 15%;
 }
 
 #place::before {
@@ -220,30 +207,24 @@
   transform: translateX();
 }
 
-.title-story h1 {
-  opacity: 0;
+.text-story {
   position: relative;
+  background-image: fixed;
   font-family: quicksand;
   font-weight: bold;
   font-size: 62px;
-  right: 12%;
-  margin-top: 80px;
+  right: -2%;
+  margin-top: -160px;
   color: #FFF5E9;
-}
-
-/* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
-.animate-text-story {
+  /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
   animation: move-text2 2s ease-in-out forwards;
   transform: translateY();
 }
 
 .title-story img {
-  position: absolute;
-  width: 25%;
-  height: 350px;
-  padding-top: 80px;
-  padding-bottom: 120px;
-  right: 580px;
+  width: 100%;
+  padding-top: 3%;
+  right: 40%;
 }
 
 .story::before {
@@ -251,6 +232,7 @@
   content: url(../images/sunflower_leaves.png);
   left: 50px;
   top: 140px;
+  z-index: -1;
 }
 
 .story::after {
@@ -260,8 +242,7 @@
   top: 380px;
 }
 
-.background h4 {
-  opacity: 0;
+.text-studio {
   position: absolute;
   background-image: fixed;
   font-family: quicksand;
@@ -269,12 +250,10 @@
   font-size: 62px;
   margin-left: 18%;
   color: #FFF5E9;
-}
-
-/* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
-.background h4.animate-text {
+  /* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
   /* Ajouter l'animation au titre studio koukaki lorsque la classe est présente */
-  animation: move-text 2s ease-in-out forwards;
+  animation: move-text 1s ease-in-out forwards;
+  transform: translateY();
 }
 
 .background img {
@@ -313,7 +292,7 @@ label, #toggle {
   display: none;
   flex-direction: column;
   background: #FFF5E9;
-  height: 1000px;
+  height: 850px;
   margin-top: 48px;
   padding-top: 50px;
   font-weight: 400;
@@ -339,7 +318,7 @@ label {
   font-weight: bold;
   position: absolute;
   bottom: 30px;
-  left: 500px;
+  left: 35%;
 }
 
 .sidenav-class a {
@@ -351,9 +330,13 @@ label {
   flex-direction: column;
   overflow: hidden;
 }
-.main-navigation ul > li {
+.main-navigation ul li {
   font-size: 64px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+.main-navigation ul .site-title {
+  z-index: 1;
+  bottom: -90px;
 }
 
 .main-navigation li a:hover {
@@ -371,6 +354,11 @@ label {
   content: url(../images/close.png);
 }
 
+.anim-titles.menu-open::before,
+.oscars-bloc.menu-open::after {
+  display: none;
+}
+
 .site-studio-down p {
   margin: auto;
   font-size: 16px;
@@ -378,7 +366,7 @@ label {
 .site-studio-down p::after {
   content: url(../images/hibiscus_footer.png);
   position: absolute;
-  top: -220px;
+  top: -260px;
   right: -980px;
 }
 
@@ -438,18 +426,20 @@ label {
 
 .main-character {
   position: relative;
-  height: 100%;
+  font-size: 20px;
 }
-
-.main-character {
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
+.main-character h3 {
+  background-image: url(../images/orange-characters.png);
+  position: relative;
+  right: 400px;
+  margin-top: 100px;
+}
+.main-character figcaption {
+  padding-left: 35%;
 }
 
 .swiper {
-  width: 50%;
+  width: 1400px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -457,17 +447,109 @@ label {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
   height: 300px;
 }
 .swiper-slide img {
-  display: block;
-  width: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 360px;
+  margin-left: 65px;
 }
 
-@media (min-width: 400px) and (max-width: 1440px) {
+@media (min-width: 920px) and (max-width: 1024px) {
+  .story::before {
+    left: -20px;
+    top: 150px;
+  }
+  .story::after {
+    left: 40px;
+  }
+  .text-story {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  .sidenav-class .title-menu {
+    left: 30%;
+  }
+  .swiper {
+    width: 800px;
+  }
+  .swiper-slide {
+    height: 100px;
+  }
+  .swiper-slide img {
+    width: 150px;
+  }
+  .home {
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+  #background-video {
+    width: 100%;
+    padding-top: 360px;
+    padding-bottom: 300px;
+  }
+  .banner {
+    min-height: 460px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .home {
+    margin-left: 100px;
+  }
   #background-video,
   #place::before {
-    right: none;
+    width: 100%;
+    left: 11%;
   }
-}/*# sourceMappingURL=koukaki.css.map */
+  .banner {
+    min-height: 520px;
+  }
+  .story::before {
+    display: none;
+  }
+  .story::after {
+    display: none;
+  }
+  .text-story {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  .title-story img {
+    height: 12%;
+  }
+  .sidenav-class .title-menu {
+    font-size: 21px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+  }
+  .swiper {
+    width: 60%;
+  }
+  .swiper-slide {
+    height: 100px;
+  }
+  .swiper-slide img {
+    width: 28%;
+  }
+}
+/* Media query pour les écrans de bureau */
+/*@media only screen and (min-width: 1024px) {
+    body {
+      font-size: 18px;
+      /* Ajoutez d'autres styles pour les écrans de bureau ici */
+/* Media query pour une taille d'écran moyenne tablette*/
+/*@media only screen and (max-width: 768px) {
+    .img-responsive {
+      width: 80%;
+    }
+  }*/
+/* Media query pour les écrans plus petits smartphone*/
+/*@media only screen and (max-width: 480px) {
+  .img-responsive {
+    width: 60%;
+  }
+}*//*# sourceMappingURL=koukaki.css.map */

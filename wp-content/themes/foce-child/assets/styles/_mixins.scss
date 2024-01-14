@@ -1,4 +1,5 @@
 @mixin anim-purpleTitle-video {
+//effet FadeIn
 //animation du bas vers le haut de la section histoire et studio vers la video
 	animation-name: down-up;
 	animation-duration: 1500ms;
@@ -15,6 +16,7 @@
 }
 
 @mixin anim-video-purpleTitle{
+//effet FadeIn
 // animation du haut vers le bas de la video avec la section histoire et studio
 	animation-name: up-down;
 	animation-duration: 1s;
@@ -30,22 +32,36 @@
    }
 }
 
-@mixin anim-parallax-video {
-//parallax titre et video
-	transform: translate(-50%, -50%);
-	animation: parallax-title 2s ease-in-out infinite
+@mixin anim-parallax-logo {
+//parallax logo et video
+	transform: translateY();
+	animation: parallax-title 5s ease-in-out forwards;
 }
-@keyframes parallax-title {
+@keyframes parallax-title{
 	0% {
-		transform: translateY(0);
-		}
-	50% {
-		transform: translateY(-20px);
-		}
-	100% {
-		transform: translateY(0);
-		}
+		transform: translateY(0%);
+	  }
+	  100% {
+		transform: translateY(50%);
+	  }
 }
+
+@mixin floatElement {
+	//Flottement du logo et des figures de chat du menu
+		animation: floatAnimation 2s ease-in-out infinite;
+		transform: translateY(20px);
+	}
+	@keyframes floatAnimation {
+		0% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-20px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
 
 @mixin anim-title-story {
 //animation du titre Histoire sur fond violet
@@ -54,30 +70,27 @@
 }
 @keyframes move-text2 {
 	0% {
-	  opacity: 0;
-	  transform: translateY(100%);
+		transform: translateY(100%);
 	}
 	100% {
-	  opacity: 1;
-	  transform: translateY(40%);
+		transform: translateY(30%);
 	}
   }
   
 //animation du titre Studio koukaki sur fond violet
 @mixin anim-title-studio {
 /* Ajouter l'animation au titre studio koukaki lorsque la classe est présente */
-	animation: move-text 2s ease-in-out forwards;
+	animation: move-text 1s ease-in-out forwards;
+	transform: translateY();
 }
 @keyframes move-text {
-	0% {
-	  opacity: 0;
-	  transform: translateY(70%);
-	}
-	100% {
-	  opacity: 1;
-	  transform: translateY(-50%);
-	}
-}  
+		0% {
+			transform: translateY(10%);
+		}
+		100% {
+			transform: translateY(-30%);
+		}
+	  } 
  
 @mixin clouds-move {
 //nuages en mouvement de droite vers la gauche
@@ -103,22 +116,7 @@
   	}
 }
 
-@mixin floatElement {
-//Flottement des éléments
-	animation: floatAnimation 2s ease-in-out infinite;
-	transform: translateY(20px);
-}
-@keyframes floatAnimation {
-	0% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-20px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
-}
+
 
 
 

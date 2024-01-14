@@ -13,11 +13,12 @@ label, #toggle {
     display: none;
     flex-direction: column;
     background: $color-background-menu;
-    height: 1000px;
+    height: 850px;
     margin-top: 48px;
     padding-top: 50px;
     font-weight: 400;
 }
+
 label {
     width: 130px;
     display: flex;
@@ -36,7 +37,7 @@ label {
     font-weight: bold;
     position: absolute;
     bottom: 30px;
-    left: 500px;
+    left: 35%;
 }
 .sidenav-class a {
     position: relative;
@@ -45,11 +46,16 @@ label {
 .main-navigation ul {
     flex-direction: column;
     overflow: hidden;
-    & > li {
+    & li {
         font-size: 64px;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
+    }
+    & .site-title {
+        z-index: 1;
+        bottom: -90px;
     }
 }
+
 
 //mettre la liste du menu en fond orange au survol
 .main-navigation li a:hover {
@@ -69,7 +75,15 @@ label {
 //Icône croix
 .active-icon {
     content: url(../images/close.png);
-}
+    }
+
+.anim-titles.menu-open::before,
+.oscars-bloc.menu-open::after {
+      display: none;
+    }
+    
+
+
 
 // ajouter les images dans le menu burger
 .site-studio-down p {
@@ -78,7 +92,7 @@ label {
     &::after {
         content: url(../images/hibiscus_footer.png);
         position: absolute;
-        top: -220px;
+        top: -260px;
         right: -980px;
 }
 }

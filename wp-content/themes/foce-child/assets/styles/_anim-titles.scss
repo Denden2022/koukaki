@@ -1,28 +1,24 @@
 $color-title: #FFF5E9;
 
 //titre Histoire
-.title-story h1{
-	opacity: 0;
+
+.text-story {
 	position: relative;
+	background-image: fixed;
 	font-family: quicksand;
 	font-weight: bold;
 	font-size: 62px;
-	right: 12%;
-	margin-top: 80px;
+	right: -2%;
+	margin-top: -160px;
 	color: $color-title;
+/* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
+		@include anim-title-story;
 	}
- /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
-.animate-text-story {
-    @include anim-title-story;
-}
 
 .title-story img {
-	position: absolute;
-	width: 25%;
-	height: 350px;
-	padding-top: 80px;
-	padding-bottom: 120px;
-	right: 580px;
+	width: 100%;
+	padding-top: 3%;
+	right: 40%;
 }
 
 //la branche de gauche avec la fleur blanche à côté du titre L'histoire
@@ -31,6 +27,7 @@ $color-title: #FFF5E9;
 	content: url(../images/sunflower_leaves.png);
 	left: 50px;
 	top: 140px;
+	z-index: -1;
 }
 .story::after {
 	position: absolute;
@@ -40,8 +37,7 @@ $color-title: #FFF5E9;
 }
 
 //animation titre Studio koukaki
-.background h4 {
-	opacity: 0;
+.text-studio {
 	position: absolute;
 	background-image: fixed;
 	font-family: quicksand;
@@ -49,12 +45,9 @@ $color-title: #FFF5E9;
 	font-size: 62px;
 	margin-left: 18%;
 	color: $color-title;
-	}
-
  /* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
- .background h4.animate-text {
-    @include anim-title-studio;
-  }
+  	@include anim-title-studio;
+	}
 
 .background img {
 	position: relative;
