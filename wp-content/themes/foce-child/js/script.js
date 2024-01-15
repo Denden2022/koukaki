@@ -1,31 +1,50 @@
 /**
  * effet parallax sur le titre de la vidéo
  */
-/*
-document.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  var element = document.querySelector('.parallax-element'); // Sélecteur de votre élément
 
-  // Vous pouvez ajuster cette valeur pour déclencher l'animation à un endroit spécifique lors du défilement
-  var triggerPosition = 200;
+/*function LogoAnimation() {
+  const logo = document.querySelector('.parallax-logo');
+ 
+  // A chaque fois que j'ajoute la nouvelle class, le logo descend en même temps que je scroll
+ const seeLogo = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      logo.classList.add('anim-logo-scroll');
+      return;
+    }
+      logo.classList.remove('anim-logo-scroll');
+  });
+ });
+ 
+ seeLogo.observe(document.querySelector('#background-video'));
+ }
+ 
+ LogoAnimation();
 
-  if (scrollPosition > triggerPosition) {
-    element.classList.add('anim-parallax-logo');
-  } else {
-    element.classList.remove('anim-parallax-logo');
-  }
-});*/
+// Ajoutez votre fonction de parallax pour le titre
+function updateParallax() {
+  const scrollPosition = window.scrollY || window.pageYOffset;
+  const parallaxTitle = document.querySelector('#parallax-title'); // Remplacez par l'ID correct de votre titre
 
+  // Appliquez l'effet parallax en fonction de la position de défilement
+  parallaxTitle.style.transform = 'translateY(' + (scrollPosition / 2) + 'px)';
+}
+
+// Ajoutez un écouteur d'événement de défilement pour mettre à jour le parallaxTitle lors du défilement
+window.addEventListener('scroll', updateParallax);
+
+// Lancez l'animation du logo
+LogoAnimation();*/
 
 /**
  * Au scroll, le logo descend et s'arrête en bas de la vidéo
  */
-/*document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function() {
   var scrollPosition = window.scrollY;
   var parallaxTitle = document.querySelector('.parallax-title');
   // Appliquez la transformation en fonction de la position de défilement
   parallaxTitle.style.transform = 'translateY(' + (scrollPosition / 2) + 'px)';
-});*/
+});
 
 /**
  * transformer le burger en croix lorsque l'on rentre dans le menu

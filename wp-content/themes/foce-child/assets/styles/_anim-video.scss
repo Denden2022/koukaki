@@ -1,9 +1,9 @@
 //flottement du logo
 .banner img {
 	@include floatElement;
-    
+    @include anim-parallax-logo;
 }
-.parallax-title {
+.anim-logo-scroll {
     @include anim-parallax-logo;
 }
 
