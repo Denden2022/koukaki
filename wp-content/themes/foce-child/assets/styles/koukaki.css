@@ -465,8 +465,23 @@ label {
     left: 40px;
   }
   .text-story {
-    margin-top: 50px;
+    margin-top: -105px;
     font-size: 40px;
+    color: #FFF5E9;
+  }
+  .title-story img {
+    width: 60%;
+  }
+  .story__article {
+    margin-top: 50px;
+  }
+  .story__article::before {
+    right: -100px;
+    margin-top: -80px;
+  }
+  .story__article::after {
+    right: -100px;
+    margin-top: -80px;
   }
   .sidenav-class .title-menu {
     left: 30%;

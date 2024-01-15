@@ -8,9 +8,24 @@
     .story::after {
         left: 40px;
     }
-    .text-story {
-        margin-top: 50px;
+    .text-story {//titre L'histoire
+        margin-top: -105px;
         font-size: 40px;
+        color: $color-title;
+    }
+    .title-story img {
+        width: 60%;
+    }
+    .story__article {//titre L'histoire et son paragraphe
+        margin-top: 50px;
+        &::before {//branche de la fleur orange de L'histoire
+            right: -100px;
+            margin-top: -80px;
+        }
+        &::after {//fleur orange de l'histoire
+            right: -100px;
+            margin-top: -80px;
+        }
     }
 
     .sidenav-class .title-menu {
