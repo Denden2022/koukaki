@@ -340,13 +340,6 @@ label {
   text-shadow: 10px 0px 10px rgba(255, 92, 0, 0.8);
 }
 
-/*.burger-icon .line {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-  }*/
 .active-icon {
   content: url(../images/close.png);
 }
@@ -453,7 +446,8 @@ label {
   margin-left: 65px;
 }
 
-@media (min-width: 900px) and (max-width: 1024px) {
+/***Ecran 1024px****/
+@media (min-width: 900px) and (max-width: 1025px) {
   /** section navbar, video, logo et menu**/
   .home {
     margin-left: 100px;
@@ -476,6 +470,17 @@ label {
   }
   .main-navigation ul li {
     font-size: 30px;
+  }
+  /** section Menu **/
+  .site-studio-down p::after,
+  .site-story::after,
+  .site-place::before,
+  .site-place::after,
+  .site-studio::after {
+    content: none;
+  }
+  .main-navigation ul .site-title {
+    bottom: -100px;
   }
   /** section L'histoire **/
   .story::before {
@@ -547,6 +552,7 @@ label {
     right: 0;
   }
 }
+/***Ecran de 768px***/
 @media (min-width: 750px) and (max-width: 899px) {
   /** section navbar, video, logo et menu**/
   .home {
@@ -564,6 +570,9 @@ label {
   .banner {
     min-height: 420px;
     margin-bottom: 100px;
+  }
+  .float-logo {
+    right: -180px;
   }
   .sidenav-class .title-menu {
     left: 30%;
@@ -643,6 +652,7 @@ label {
   }
 }
 /* Media query pour les écrans plus petits smartphone*/
+/****Ecran 480px*****/
 @media (min-width: 350px) and (max-width: 490px) {
   /** section navbar, video, logo et menu**/
   .home {
@@ -659,6 +669,10 @@ label {
   .banner {
     min-height: 220px;
     margin-bottom: 100px;
+  }
+  .float-logo {
+    right: -120px;
+    top: 50px;
   }
   .sidenav-class .title-menu {
     left: 30%;

@@ -62,16 +62,6 @@ label {
     text-shadow: 10px 0px 10px rgb(255, 92, 0, 0.8) ;
 }
 
-//mettre le burger en croix quand on rentre dans le menu
-//Icône burger
-/*.burger-icon .line {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-  }*/
-
 //Icône croix
 .active-icon {
     content: url(../images/close.png);
@@ -82,9 +72,6 @@ label {
       display: none;
     }
     
-
-
-
 // ajouter les images dans le menu burger
 .site-studio-down p {
     margin: auto;

@@ -3,10 +3,10 @@
     @include floatElement;  
 }
 
-
 //bannière video
 #background-video {
     position: absolute;
+    //z-index: -1; pour vérifier si le banner est toujours présent à l'arrière plan
     }
 .float-logo {
     position: relative;

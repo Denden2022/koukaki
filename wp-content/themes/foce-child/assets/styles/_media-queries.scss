@@ -1,6 +1,6 @@
 //ecran desktop inférieur ou égal à 1600px entre 769px à 1601px, desktop du site est égale à 1440px
-@media (min-width:900px) and (max-width:1024px) {
-
+/***Ecran 1024px****/
+@media (min-width:900px) and (max-width:1025px) {
 /** section navbar, video, logo et menu**/
     .home {
         margin-left: 100px;
@@ -23,8 +23,18 @@
     }.main-navigation ul li {
         font-size: 30px;
     }
-
-
+/** section Menu **/
+    .site-studio-down p::after,
+    .site-story::after,
+    .site-place::before,
+    .site-place::after,
+    .site-studio::after
+        {
+            content: none;
+    }
+    .main-navigation ul .site-title {
+        bottom: -100px;
+    }
 /** section L'histoire **/
     .story::before {
         //left: -20px;
@@ -54,8 +64,6 @@
             margin-top: -80px;
         }
     }
-
-
 /** section Les personnages **/
     .swiper {
         width: 800px;
@@ -72,21 +80,18 @@
     .story #characters {
         display: none;
     }
-
-
 /** section Lieu**/
-#place::before {//image superposée de la section Lieu
-    content: none;
-}
-.anim-clouds {
-    & h3::after {
+    #place::before {//image superposée de la section Lieu
         content: none;
     }
-    & h3::before {
-        content: none;
+    .anim-clouds {
+        & h3::after {
+            content: none;
+        }
+        & h3::before {
+            content: none;
+        }
     }
-}
-
 /** section Studio Koukaki **/
     .text-studio { //titre Studio koukaki
         font-size: 30px;
@@ -104,12 +109,12 @@
     .anim-titles::after {//fleur multi de droite
         right: 0;
     }
-
 }
 
-//écran tablette inférieur ou égale à 768px, écran mobile inférieur ou égale à 480px
-    @media (min-width:750px) and (max-width:899px) {
 
+//écran tablette inférieur ou égale à 768px, écran mobile inférieur ou égale à 480px
+/***Ecran de 768px***/
+@media (min-width:750px) and (max-width:899px) {
 /** section navbar, video, logo et menu**/
     .home {
         margin-left: 100px;
@@ -127,6 +132,9 @@
         min-height: 420px;
         margin-bottom: 100px;
     }    
+    .float-logo {
+        right: -180px;
+    }
     .sidenav-class .title-menu {
         left: 30%;
     }
@@ -139,7 +147,6 @@
         max-width: 50%;
         margin-left: 70px;
     }
-
 /** section L'histoire **/
     .story::before {
         content: none;
@@ -154,8 +161,6 @@
     .title-story img {
         width: 55%;
     }
-
-
 /** section Les personnages **/
     .swiper {
         width: 500px;
@@ -172,8 +177,6 @@
     .story #characters {
         display: none;
     }
-
-
 /** section Lieu**/
 #place::before {//image superposée de la section Lieu
     content: none;
@@ -186,7 +189,6 @@
         content: none;
     }
 }
-
 /** section Studio Koukaki **/
     .text-studio { //titre Studio koukaki
         font-size: 30px;
@@ -216,116 +218,120 @@
     }
 }
 
-  /* Media query pour les écrans plus petits smartphone*/
+
+/* Media query pour les écrans plus petits smartphone*/
+/****Ecran 480px*****/
 @media (min-width:350px) and (max-width: 490px) {
 /** section navbar, video, logo et menu**/
-.home {
-    margin-left: 50px;
-}
-.main-navigation {
-    height: 150px;
-}
-#background-video {
-    width: 100%;
-    padding-top: 360px;
-    padding-bottom: 300px;
-}
-.banner {
-    min-height: 220px;
-    margin-bottom: 100px;
-}    
-.sidenav-class .title-menu {
-    left: 30%;
-}
-.sidenav-class .close {
-    height: 350px;
-}
-.main-navigation ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
+    .home {
+        margin-left: 50px;
+    }
+    .main-navigation {
+        height: 150px;
+    }   
+    #background-video {
+        width: 100%;
+        padding-top: 360px;
+        padding-bottom: 300px;
+    }
+    .banner {
+        min-height: 220px;
+        margin-bottom: 100px;
+    }    
+    .float-logo {
+        right: -120px;
+        top: 50px;
+    }
+    .sidenav-class .title-menu {
+        left: 30%;
+    }
+    .sidenav-class .close {
+        height: 350px;
+    }
+    .main-navigation ul li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        }
+
+    /** section L'histoire **/
+    .story::before {
+        content: none;
+    }
+    .story::after {
+        content: none;
+    }
+    .text-story {//titre L'histoire
+        margin-top: -65px;
+        font-size: 26px;
+    }
+    .title-story img {
+        width: 55%;
     }
 
-/** section L'histoire **/
-.story::before {
-    content: none;
-}
-.story::after {
-    content: none;
-}
-.text-story {//titre L'histoire
-    margin-top: -65px;
-    font-size: 26px;
-}
-.title-story img {
-    width: 55%;
-}
-
-
-/** section Les personnages **/
-.swiper {
-    width: 500px;
-}
-.swiper-slide {
-    height: 50px;
-    & img {
-    width: 50px;
+    /** section Les personnages **/
+    .swiper {
+        width: 500px;
     }
-}
-.main-character h3 {
-   right: 100px;
-}
-.story #characters {
-    display: none;
-}
+    .swiper-slide {
+        height: 50px;
+        & img {
+        width: 50px;
+        }
+    }
+    .main-character h3 {
+    right: 100px;
+    }
+    .story #characters {
+        display: none;
+    }
 
-
-/** section Lieu**/
-#place::before {//image superposée de la section Lieu
-content: none;
-}
-.anim-clouds {
-& h3::before {
-    content: none;
-}
-& h3::after {
-    content: none;
-}
-}
-
-/** section Studio Koukaki **/
-.text-studio { //titre Studio koukaki
-    font-size: 20px;
-    left: 3em;
-}
-.background img {
-    width: 70%;
-}
-.anim-titles {
-&::before {
+    /** section Lieu**/
+    #place::before {//image superposée de la section Lieu
     content: none;
     }
-&::after {
-    content: none;
+    .anim-clouds {
+    & h3::before {
+        content: none;
     }
-}
-.oscars-bloc {
+    & h3::after {
+        content: none;
+    }
+    }
+
+    /** section Studio Koukaki **/
+    .text-studio { //titre Studio koukaki
+        font-size: 20px;
+        left: 3em;
+    }
+    .background img {
+        width: 70%;
+    }
+    .anim-titles {
     &::before {
         content: none;
-    }
+        }
     &::after {
         content: none;
+        }
     }
-}
-#oscars-id {
-    flex-direction: column;
-    & .oscars-text {
-        font-size: 20px;
+    .oscars-bloc {
+        &::before {
+            content: none;
+        }
+        &::after {
+            content: none;
+        }
     }
-    & img {
-        width: 30%;
+    #oscars-id {
+        flex-direction: column;
+        & .oscars-text {
+            font-size: 20px;
+        }
+        & img {
+            width: 30%;
+        }
     }
-}
-}
+    }
 
 /* Media query pour les écrans de bureau */
 /*@media only screen and (min-width: 1024px) {*/
