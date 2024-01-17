@@ -447,7 +447,7 @@ label {
 }
 
 /***Ecran 1024px****/
-@media (min-width: 900px) and (max-width: 1025px) {
+@media (min-width: 900px) and (max-width: 1024px) {
   /** section navbar, video, logo et menu**/
   .home {
     margin-left: 100px;
@@ -455,7 +455,7 @@ label {
   }
   #background-video {
     width: 100%;
-    padding-top: 340px;
+    padding-top: 420px;
     padding-bottom: 300px;
   }
   .banner {
@@ -658,9 +658,6 @@ label {
   .home {
     margin-left: 50px;
   }
-  .main-navigation {
-    height: 150px;
-  }
   #background-video {
     width: 100%;
     padding-top: 360px;
@@ -678,11 +675,34 @@ label {
     left: 30%;
   }
   .sidenav-class .close {
-    height: 350px;
+    height: 380px;
+    top: 60px;
+  }
+  /** section Menu **/
+  .site-story::before {
+    content: none;
+  }
+  .main-navigation {
+    height: 150px;
+  }
+  .main-navigation ul {
+    display: initial;
+    margin-left: 150px;
+    margin-top: -80px;
+  }
+  .main-navigation .site-title {
+    bottom: -20px;
   }
   .main-navigation ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  .sidenav-class a {
+    bottom: 0;
+  }
+  .site-place::after {
+    right: 0;
+    left: 180px;
+    bottom: 0;
   }
   /** section L'histoire **/
   .story::before {
