@@ -25,7 +25,7 @@
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(50%);
+    transform: translateY(30%);
   }
 }
 @keyframes floatAnimation {
@@ -148,24 +148,19 @@
   bottom: 100px;
 }
 
-.banner img {
+.anim-logo-scroll {
   animation: floatAnimation 2s ease-in-out infinite;
   transform: translateY(20px);
-  transform: translateY();
-  animation: parallax-title 5s ease-in-out forwards;
-}
-
-.anim-logo-scroll {
-  transform: translateY();
-  animation: parallax-title 5s ease-in-out forwards;
 }
 
 #background-video {
   position: absolute;
 }
 
-.banner > img {
+.float-logo {
   position: relative;
+  width: 100%;
+  right: -350px;
 }
 
 #place::before {
@@ -651,8 +646,7 @@ label {
 @media (min-width: 350px) and (max-width: 490px) {
   /** section navbar, video, logo et menu**/
   .home {
-    margin-left: 100px;
-    margin-right: 50px;
+    margin-left: 50px;
   }
   .main-navigation {
     height: 150px;
@@ -670,10 +664,11 @@ label {
     left: 30%;
   }
   .sidenav-class .close {
-    height: 550px;
+    height: 350px;
   }
   .main-navigation ul li {
-    font-size: 30px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
   /** section L'histoire **/
   .story::before {

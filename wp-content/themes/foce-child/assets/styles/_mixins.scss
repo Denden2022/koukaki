@@ -34,17 +34,18 @@
 
 @mixin anim-parallax-logo {
 //parallax logo et video
-	transform: translateY();
-	animation: parallax-title 5s ease-in-out forwards;
+	animation: parallax-title 5s ease-in-out forwards, floatAnimation 2s ease-in-out infinite;
+	
 }
 @keyframes parallax-title{
 	0% {
 		transform: translateY(0%);
 	  }
-	  100% {
-		transform: translateY(50%);
+	100% {
+		transform: translateY(30%);
 	  }
 }
+
 
 @mixin floatElement {
 	//Flottement du logo et des figures de chat du menu

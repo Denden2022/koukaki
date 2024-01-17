@@ -1,9 +1,107 @@
 /**
- * effet parallax sur le titre de la vidéo
+ * Effet parallax sur le titre de la vidéo et effet de flottement
+ * Au scroll, le logo descend et s'arrête en bas de la vidéo
  */
+/*function LogoAnimation() {
+  const logo = document.querySelector('.parallax-logo');
+  const stopAnimationAt = 300; // Remplacez 500 par la position de défilement à laquelle vous souhaitez arrêter l'animation
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const parallaxValue = scrollTop * 0.5;
+
+    // Si l'élément est dans la vue et la position de défilement n'a pas dépassé le point d'arrêt
+    if (logo.classList.contains('in-view') && scrollTop <= stopAnimationAt) {
+      logo.style.transform = `translateY(${parallaxValue}px)`;
+      logo.style.animation = 'floatAnimation 2s ease-in-out infinite';
+    } else {
+      logo.style.animation = 'none'; // Arrêter l'effet de flottement quand l'animation de défilement est désactivée
+    }
+  };
+
+  const seeLogo = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        logo.classList.add('in-view');
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        logo.classList.remove('in-view');
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  seeLogo.observe(document.querySelector('#logo'));
+}
+
+LogoAnimation();*/
 
 /*function LogoAnimation() {
   const logo = document.querySelector('.parallax-logo');
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const parallaxValue = scrollTop * 0.5;
+
+    // Si l'élément est dans la vue, appliquez le déplacement vers le bas
+    if (logo.classList.contains('in-view')) {
+      logo.style.transform = `translateY(${parallaxValue}px)`;
+    } return
+  };
+  
+  const seeLogo = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        logo.classList.add('in-view');
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        logo.classList.remove('in-view');
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  seeLogo.observe(document.querySelector('#logo'));
+}
+
+LogoAnimation();*/
+
+/*****animation de descente du Logo au scroll*/
+function LogoAnimationDown() {
+  const logo = document.querySelector('.parallax-logo');
+  const stopAnimationAt = 400; // Remplacez 500 par la position de défilement à laquelle vous souhaitez arrêter l'animation
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const parallaxValue = scrollTop * 0.5;
+
+    // Si l'élément est dans la vue et la position de défilement n'a pas dépassé le point d'arrêt
+    if (logo.classList.contains('in-view') && scrollTop <= stopAnimationAt) {
+      logo.style.transform = `translateY(${parallaxValue}px)`;
+    } return;
+  };
+
+  const seeLogo = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        logo.classList.add('in-view');
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        logo.classList.remove('in-view');
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  seeLogo.observe(document.querySelector('#logo'));
+}
+
+LogoAnimationDown();
+
+/****Animation du logo qui flotte */
+//le Logo flotte
+function LogoFloat() {
+  const logo = document.querySelector('.float-logo');
  
   // A chaque fois que j'ajoute la nouvelle class, le logo descend en même temps que je scroll
  const seeLogo = new IntersectionObserver(entries => {
@@ -19,32 +117,8 @@
  seeLogo.observe(document.querySelector('#background-video'));
  }
  
- LogoAnimation();
+ LogoFloat();
 
-// Ajoutez votre fonction de parallax pour le titre
-function updateParallax() {
-  const scrollPosition = window.scrollY || window.pageYOffset;
-  const parallaxTitle = document.querySelector('#parallax-title'); // Remplacez par l'ID correct de votre titre
-
-  // Appliquez l'effet parallax en fonction de la position de défilement
-  parallaxTitle.style.transform = 'translateY(' + (scrollPosition / 2) + 'px)';
-}
-
-// Ajoutez un écouteur d'événement de défilement pour mettre à jour le parallaxTitle lors du défilement
-window.addEventListener('scroll', updateParallax);
-
-// Lancez l'animation du logo
-LogoAnimation();*/
-
-/**
- * Au scroll, le logo descend et s'arrête en bas de la vidéo
- */
-document.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  var parallaxTitle = document.querySelector('.parallax-title');
-  // Appliquez la transformation en fonction de la position de défilement
-  parallaxTitle.style.transform = 'translateY(' + (scrollPosition / 2) + 'px)';
-});
 
 /**
  * transformer le burger en croix lorsque l'on rentre dans le menu

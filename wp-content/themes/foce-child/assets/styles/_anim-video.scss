@@ -1,18 +1,17 @@
 //flottement du logo
-.banner img {
-	@include floatElement;
-    @include anim-parallax-logo;
-}
 .anim-logo-scroll {
-    @include anim-parallax-logo;
+    @include floatElement;  
 }
+
 
 //bannière video
 #background-video {
     position: absolute;
     }
-.banner > img {
+.float-logo {
     position: relative;
+    width: 100%;
+    right: -350px;
 }
 
 
