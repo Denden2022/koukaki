@@ -8,7 +8,7 @@ $color-title: #FFF5E9;
 	font-family: quicksand;
 	font-weight: bold;
 	font-size: 62px;
-	right: -2%;
+	right: -30%;
 	margin-top: -160px;
 	color: $color-title;
 /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
@@ -17,8 +17,19 @@ $color-title: #FFF5E9;
 
 .title-story img {
 	width: 100%;
-	padding-top: 3%;
-	right: 40%;
+	padding-top: 7%;
+	margin-left: 30%;
+}
+.story__article {
+	flex-direction: row;
+	& p {
+		position: absolute;
+		display: flex;
+		right: 400px;
+		left: 400px;
+		top: 200px;
+	}
+	
 }
 
 //la branche de gauche avec la fleur blanche à côté du titre L'histoire
@@ -27,7 +38,6 @@ $color-title: #FFF5E9;
 	content: url(../images/sunflower_leaves.png);
 	left: 50px;
 	top: 140px;
-	z-index: -1;
 }
 .story::after {
 	position: absolute;
@@ -48,11 +58,10 @@ $color-title: #FFF5E9;
  /* Ajouter l'animation au titre Studio koukaki lorsque la classe est présente */
   	@include anim-title-studio;
 	}
-
 .background img {
 	position: relative;
 	width: 60%;
-	margin: auto;
+	margin-left: 190px;
 }
 #studio .title {
 	display: none;

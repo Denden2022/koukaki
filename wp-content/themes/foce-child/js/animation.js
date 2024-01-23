@@ -1,5 +1,5 @@
 /**
- * Effet parallax sur le titre de la vidéo et effet de flottement
+ * I-Effet parallax sur le titre de la vidéo et effet de flottement en 2 parties
  */
 /*****animation de descente du Logo au scroll et qui s'arrête à la bordure de la vidéo*/
 function LogoAnimationDown() {
@@ -33,12 +33,13 @@ function LogoAnimationDown() {
 
 LogoAnimationDown();
 
-/****Animation du logo qui flotte */
+
+/****II-Animation du logo qui flotte */
 //le Logo flotte
 function LogoFloat() {
   const logo = document.querySelector('.float-logo');
  
-  // A chaque fois que j'ajoute la nouvelle class, le logo descend en même temps que je scroll
+  // A chaque fois que la nouvelle class est présente, le logo flotte
  const seeLogo = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -56,58 +57,9 @@ function LogoFloat() {
 
 
 /**
- * transformer le burger en croix lorsque l'on rentre dans le menu
+ * III-mouvement des titres sur fond bleu
  */
-function toggleBurger() {
-  var burgerIcon = document.getElementById('burgerIcon');
-  var crossIcon = document.getElementById('crossIcon');
-  
-  // Vérifie si l'image du burger est actuellement active
-  if (burgerIcon.classList.contains('active-icon')) {
-    // Désactive l'image du burger et active l'image de la croix
-      burgerIcon.classList.remove('active-icon');
-      crossIcon.classList.add('active-icon');
-      // Ajoute une classe pour cacher l'image lorsque le menu est ouvert
-  } else {
-    // Désactive l'image de la croix et active l'image du burger
-      burgerIcon.classList.add('active-icon');
-      crossIcon.classList.remove('active-icon');
-      // Retire la classe pour montrer l'image lorsque le menu est fermé
-  }
-}
-
- /**
- * quand je clique sur un lien du menu, j'arrive sur sa page et le menu se ferme.
- */
-document.querySelectorAll('.close ul li a').forEach(link => {
-  link.addEventListener('click', () => {
-    // Fermer le menu lorsqu'un lien est cliqué
-    var toggleCheckbox = document.getElementById('toggle');
-    toggleCheckbox.checked = false;
-    // Désactiver l'icône de la croix et activer l'icône du burger si nécessaire
-    var burgerIcon = document.getElementById('burgerIcon');
-    burgerIcon.classList.remove('active-icon');
-  });
-});
-
- /**
- * quand je clique sur le menu, les fleurs apparentes de la section oscars disparaissent
- */
- document.querySelectorAll('#burgerIcon').forEach(link => {
-  link.addEventListener('click', () => {
-    // Désactiver les éléments ::before de la classe .anim-titles et ::after de la classe .oscars-bloc
-    var flowerPurple = document.querySelector('.oscars-bloc');
-    var flowerPink = document.querySelector('.anim-titles');
-    flowerPurple.classList.toggle('menu-open');
-    flowerPink.classList.toggle('menu-open');
-  });
-});
-
-
-/**
- * mouvement des titres sur fond bleu
- */
-  /******animation L'histoire au scroll*****/
+  /****** a) animation L'histoire au scroll*****/
   function interceptStory(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -120,7 +72,7 @@ document.querySelectorAll('.close ul li a').forEach(link => {
   
   // Création de l'instance IntersectionObserver
   const seeStory = new IntersectionObserver(interceptStory, {
-    threshold: 1, // Déclenche la fonction de rappel lorsque 50% du texte est visible
+    threshold: 1, // Déclenche la fonction de rappel lorsque 100% du texte est visible
   });
   // Ciblage de l'élément texte à observer
   const targetTextStory = document.querySelector('.text-story');
@@ -128,7 +80,7 @@ document.querySelectorAll('.close ul li a').forEach(link => {
   seeStory.observe(targetTextStory);
 
 
-  /****titre Studio koukaki*****/
+  /**** b) titre Studio koukaki*****/
   //animation Studio koukaki au scroll
 // Fonction de rappel pour l'IntersectionObserver
 function interceptStudio(entries) {
@@ -149,24 +101,9 @@ const targetTextStudio = document.querySelector('.text-studio');
 // Lancement de l'observation
 seeStudio.observe(targetTextStudio);
 
-/**
- * swiper effect coverflow sur les personnages
- */
-const mySwiper = new Swiper(".swiper", {
-  loop:true,
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 3,
-  coverflowEffect: {
-    rotate: 30,
-    stretch: -70,
-    slideShadows: false,
-  },
-});
 
 /**
- * mouvements des nuages au scroll
+ * IV-mouvements des nuages au scroll
  */
  // Je cible la class concernée
  function cloudsAnimation() {

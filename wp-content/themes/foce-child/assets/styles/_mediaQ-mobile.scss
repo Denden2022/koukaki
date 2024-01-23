@@ -1,0 +1,480 @@
+/* Media query pour les écrans plus petits smartphone*/
+                    /****Ecran 480px et 320px*****/
+    @media (min-width:480px) and (max-width: 600px) {
+        .main-navigation {
+            height: 100px;
+            width: 100%;
+        }
+        #background-video {
+            width: 100%;
+            background-size: cover;
+            padding-top: 300px;
+            padding-bottom: 300px;
+        }
+        .banner {
+            min-height: 270px;
+            margin-bottom: 100px;
+        }    
+        .float-logo {
+            right: -80px;
+            width: 80%;
+        }
+        .sidenav-class .title-menu {
+            left: 15%;
+            top: 25px;
+            font-size: 16px;
+            width: 35%;
+        }
+        label {
+            margin-left: 320px;
+        }
+        .sidenav-class .close {
+            height: 850px;
+        }.main-navigation ul li {
+            font-size: 30px;
+        }
+        .site-title img {
+            max-width: 50%;
+            margin-left: 70px;
+        }
+
+/** section Menu **/
+.main-navigation {
+height: 100px;
+& ul {
+    display: initial;
+    padding-left: 150px;
+    padding-top: 10px;
+}
+& .site-title {
+    bottom: -20px;
+}
+}
+.main-navigation ul li {
+font-size: 24px;
+margin-bottom: 50px;
+}
+.sidenav-class {
+    & a {
+        bottom: 0;
+    }
+    & .close {
+        top: 20px;
+        padding-top: 0;
+ }
+}
+.site-place::after
+{
+    right: 0;
+    left: 180px;
+    bottom: 0;
+}
+.site-studio-down p {
+    margin-top: 350px;
+    &::after {//fleur footer
+        top: -150px;
+        right: -400px;
+}
+}
+.site-story {
+    &::after {//grande fleur marguerite
+        left: 200px;
+        top: -30px;
+    }
+}
+.site-place {
+    &::before {//boule de petites fleurs
+        right: 400px;
+    }
+    &::after {//chat noir
+        left: 200px;
+        top: 100px;
+    }
+}
+.site-characters {
+    &::before {//fleur violette
+        right: 530px;
+        bottom: 260px;
+    }
+}
+.site-studio {
+    &::before {//chat orange
+        right: 360px;
+        bottom: 50px;
+    }
+    &::after {//petite fleur rose
+        bottom: 300px;
+        left: 460px;
+    }
+}
+
+/** section L'histoire **/
+    #story {
+        position: relative;
+        margin-top: 2%;
+    }
+    .story::before {
+        content: none;
+    }
+    #story p {
+        position: relative;
+        left: -115px;
+        width: 120%;
+        top: 50px;
+    }
+
+    .text-story {
+        right: -100px;
+        margin-top: -240px;
+        font-size: 20px;
+    }
+    .title-story img {
+        position: absolute;
+        width: 40%;
+        top: -20px;
+        right: 200px;
+        padding-top: 1%;
+    }
+    .story::after {
+        content: none;
+    }
+
+    /** section Les personnages **/
+        .swiper {
+            width: 440px;
+        }
+        .swiper-slide {
+            height: 300px;
+            & img {
+            width: 200px;
+            margin-left: 100px;
+            }
+        }
+        .main-character {
+            position: relative;
+            font-size: 12px;
+            & h3 {
+            right: 40px;
+            margin-top: 0;
+            margin-bottom: 50px;
+            }
+        & figcaption {
+            padding-left: 70%;
+          }
+        }
+        .story #characters {
+            display: none;
+        }
+
+
+    /** section Lieu**/
+    .story #place {
+        min-height: 0;
+    }
+    #place p {
+        width: 120%;
+        top: 0; 
+        font-size: 12px;
+    }
+
+    #place::before {//image superposée de la section Lieu
+        content: none;
+    }
+    .anim-clouds {
+        & h3::before {
+            content: none;
+        }
+        & h3::after {
+            content: none;
+        }
+    }
+    /** section Studio Koukaki **/
+        .text-studio { //titre Studio koukaki
+            font-size: 28px;
+        }
+        .background img {
+            width: 80%;
+            left: -130px;
+        }
+        .anim-titles {
+        &::before {
+            content: none;
+            }
+        &::after {
+            content: none;
+            }
+        }
+        .oscars-bloc {
+            &::before {
+                content: none;
+            }
+        }
+        #oscars-id::after {
+                content: none;
+            }
+        
+        .background::after {
+            content: none;
+        }
+        #oscars-id {
+            flex-direction: column;
+            &::after {
+                margin-top: -500px;
+            }
+        }
+        .oscars-text {
+            font-size: 20px;
+            right: -50px;
+            margin-top: 1px;
+        }
+        .oscars-nomination {
+            width: 80%;
+            margin-left: 50px;
+        }
+    }       
+    
+
+                                /****Ecran 320px*****/
+@media (max-width: 320px) {
+    .main-navigation {
+        height: 100px;
+        width: 100%;
+    }
+    #background-video {
+        width: 100%;
+        background-size: cover;
+        padding-top: 300px;
+        padding-bottom: 300px;
+    }
+    .banner {
+        min-height: 180px;
+        margin-bottom: 100px;
+    }    
+    .float-logo {
+        position: absolute;
+        right: -20px;
+        width: 80%;
+    }
+    .sidenav-class .title-menu {
+        left: 15%;
+        top: 25px;
+        font-size: 16px;
+        width: 50%;
+    }
+    label {
+        margin-left: 250px;
+    }
+    .sidenav-class .close {
+        height: 850px;
+    }.main-navigation ul li {
+        font-size: 30px;
+    }
+    .site-title img {
+        max-width: 50%;
+        margin-left: 70px;
+    }
+
+/** section Menu **/
+.main-navigation {
+height: 100px;
+& ul {
+display: initial;
+padding-left: 150px;
+padding-top: 10px;
+}
+& .site-title {
+bottom: -20px;
+}
+}
+.main-navigation ul li {
+font-size: 24px;
+margin-bottom: 50px;
+}
+.sidenav-class {
+& a {
+    bottom: 0;
+}
+& .close {
+    top: 20px;
+    padding-top: 0;
+}
+}
+.site-place::after
+{
+right: 0;
+left: 180px;
+bottom: 0;
+}
+.site-studio-down p {
+margin-top: 350px;
+&::after {//fleur footer
+    top: -150px;
+    right: -400px;
+}
+}
+.site-story {
+&::after {//grande fleur marguerite
+    left: 200px;
+    top: -30px;
+}
+}
+.site-place {
+&::before {//boule de petites fleurs
+    right: 400px;
+}
+&::after {//chat noir
+    left: 200px;
+    top: 100px;
+}
+}
+.site-characters {
+&::before {//fleur violette
+    right: 530px;
+    bottom: 260px;
+}
+}
+.site-studio {
+&::before {//chat orange
+    right: 360px;
+    bottom: 50px;
+}
+&::after {//petite fleur rose
+    bottom: 300px;
+    left: 460px;
+}
+}
+
+/** section L'histoire **/
+#story {
+    position: relative;
+    margin-top: 2%;
+}
+.story::before {
+    content: none;
+}
+#story p {
+    position: relative;
+    left: -85px;
+    width: 130%;
+    top: 50px;
+}
+
+.text-story {
+    right: -80px;
+    margin-top: -430px;
+    font-size: 20px;
+}
+.title-story img {
+    position: absolute;
+    width: 40%;
+    top: -50px;
+    right: 100px;
+    padding-top: 1%;
+}
+.story::after {
+    content: none;
+}
+
+/** section Les personnages **/
+    .swiper {
+        width: 440px;
+    }
+    .swiper-slide {
+        height: 300px;
+        & img {
+        width: 200px;
+        margin-left: 100px;
+        }
+    }
+    .main-character {
+        position: relative;
+        font-size: 12px;
+        & h3 {
+        font-size: 16px;
+        right: 70px;
+        margin-top: 0;
+        margin-bottom: 50px;
+        }
+    & figcaption {
+        padding-left: 110%;
+      }
+    }
+    .story #characters {
+        display: none;
+    }
+
+
+/** section Lieu**/
+.story #place {
+    min-height: 0;
+}
+#place p {
+    width: 120%;
+    top: 0; 
+    font-size: 12px;
+}
+
+#place::before {//image superposée de la section Lieu
+    content: none;
+}
+.anim-clouds {
+    & h3::before {
+        content: none;
+    }
+    & h3::after {
+        content: none;
+    }
+}
+/** section Studio Koukaki **/
+    .text-studio { //titre Studio koukaki
+        font-size: 28px;
+    }
+    .background img {
+        width: 80%;
+        left: -130px;
+    }
+    .anim-titles {
+    &::before {
+        content: none;
+        }
+    &::after {
+        content: none;
+        }
+    }
+    .oscars-bloc {
+        &::before {
+            content: none;
+        }
+    }
+    #oscars-id::after {
+            content: none;
+        }
+    
+    .background::after {
+        content: none;
+    }
+    #oscars-id {
+        flex-direction: column;
+        &::after {
+            margin-top: -500px;
+        }
+    }
+    .oscars-text {
+        font-size: 20px;
+        right: -50px;
+        margin-top: 1px;
+    }
+    .oscars-nomination {
+        width: 80%;
+        margin-left: 50px;
+    }
+}
+
+/* Media query pour les écrans de bureau */
+/*@media only screen and (min-width: 1024px) {*/
+
+    
+      
+    
+    
+      

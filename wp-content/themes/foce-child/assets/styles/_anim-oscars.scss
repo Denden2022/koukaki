@@ -19,10 +19,10 @@
 }
 .oscars-orange {
   height: 12em;
-  width: 80em;
 }
 .oscars-background img{
   position: absolute;
+  margin: 0;
 }
 .oscars-text {
   position: relative;
@@ -34,6 +34,9 @@
   bottom: 7em;
   width: 16em;
 }
+.oscars-nomination {
+  margin-left: -50px;
+}
 .site-footer{
   &::before {
       content: none;
@@ -42,16 +45,17 @@
       content: none;
 }}
 .oscars-bloc::before {
-  content: url(../images/Sunflower.svg);
+  content: url(../images/Sunflower.svg);//marguerite
   position: relative;
   bottom: 100px;
   left: 60px;
 }
-.oscars-bloc::after {
-  content: url(../images/orchid.png);
+#oscars-id::after{
+  content: url(../images/orchid.png);//fleur violette à droite
   position: relative;
   left: 100px;
-  bottom: 100px;
+  top: -100px;
+  transform-origin: 50% 40%;
 }
 
 

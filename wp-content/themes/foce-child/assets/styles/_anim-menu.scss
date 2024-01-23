@@ -13,7 +13,7 @@ label, #toggle {
     display: none;
     flex-direction: column;
     background: $color-background-menu;
-    height: 850px;
+    height: 880px;
     margin-top: 48px;
     padding-top: 50px;
     font-weight: 400;
@@ -66,9 +66,9 @@ label {
 .active-icon {
     content: url(../images/close.png);
     }
-
+//quand j'ouvre le menu, les fleurs disparaissent
 .anim-titles.menu-open::before,
-.oscars-bloc.menu-open::after {
+.oscars-bloc.menu-open::before {
       display: none;
     }
     
@@ -76,6 +76,7 @@ label {
 .site-studio-down p {
     margin: auto;
     font-size: 16px;
+    margin-bottom: 35px;
     &::after {
         content: url(../images/hibiscus_footer.png);
         position: absolute;
@@ -119,7 +120,7 @@ label {
         content: url(../images/orchid.png);
         position: absolute;
         right: 830px;
-        bottom: 300px;
+        bottom: 260px;
     }
 }
 .site-studio {

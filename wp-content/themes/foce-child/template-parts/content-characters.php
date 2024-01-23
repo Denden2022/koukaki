@@ -8,7 +8,7 @@
  */
 
 ?>
-    <div id="characters">    
+    
     <?php
         $args = array(
             'post_type' => 'characters',
@@ -18,11 +18,11 @@
             );
         $characters_query = new WP_Query($args);
     ?>  
-    </div><!--fermer id=characters-->
+        
         <div class="main-character">
-            <h3>Les personnages</h3>            
+        <h3>Les personnages</h3>
+                         
     <?php
-
 echo '<div class="swiper mySwiper">'; 
 echo '<div class="swiper-wrapper">';
 
@@ -52,7 +52,6 @@ echo '</div>'; //fermer mySwiper
 
 // Réinitialiser la requête WP
 wp_reset_postdata();
-
 ?>
 </div>
 </div>

@@ -41,7 +41,7 @@
 }
 @keyframes move-text2 {
   0% {
-    transform: translateY(100%);
+    transform: translateY(80%);
   }
   100% {
     transform: translateY(30%);
@@ -109,11 +109,11 @@
 
 .oscars-orange {
   height: 12em;
-  width: 80em;
 }
 
 .oscars-background img {
   position: absolute;
+  margin: 0;
 }
 
 .oscars-text {
@@ -125,6 +125,10 @@
   margin-left: 2em;
   bottom: 7em;
   width: 16em;
+}
+
+.oscars-nomination {
+  margin-left: -50px;
 }
 
 .site-footer::before {
@@ -141,11 +145,12 @@
   left: 60px;
 }
 
-.oscars-bloc::after {
+#oscars-id::after {
   content: url(../images/orchid.png);
   position: relative;
   left: 100px;
-  bottom: 100px;
+  top: -100px;
+  transform-origin: 50% 40%;
 }
 
 .anim-logo-scroll {
@@ -155,6 +160,7 @@
 
 #background-video {
   position: absolute;
+  overflow: hidden;
 }
 
 .float-logo {
@@ -185,6 +191,9 @@
   height: 55px;
 }
 
+#place {
+  margin-top: 300px;
+}
 #place h3 {
   position: relative;
 }
@@ -210,7 +219,7 @@
   font-family: quicksand;
   font-weight: bold;
   font-size: 62px;
-  right: -2%;
+  right: -30%;
   margin-top: -160px;
   color: #FFF5E9;
   /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
@@ -220,8 +229,19 @@
 
 .title-story img {
   width: 100%;
-  padding-top: 3%;
-  right: 40%;
+  padding-top: 7%;
+  margin-left: 30%;
+}
+
+.story__article {
+  flex-direction: row;
+}
+.story__article p {
+  position: absolute;
+  display: flex;
+  right: 400px;
+  left: 400px;
+  top: 200px;
 }
 
 .story::before {
@@ -229,7 +249,6 @@
   content: url(../images/sunflower_leaves.png);
   left: 50px;
   top: 140px;
-  z-index: -1;
 }
 
 .story::after {
@@ -256,7 +275,7 @@
 .background img {
   position: relative;
   width: 60%;
-  margin: auto;
+  margin-left: 190px;
 }
 
 #studio .title {
@@ -289,7 +308,7 @@ label, #toggle {
   display: none;
   flex-direction: column;
   background: #FFF5E9;
-  height: 850px;
+  height: 880px;
   margin-top: 48px;
   padding-top: 50px;
   font-weight: 400;
@@ -345,13 +364,14 @@ label {
 }
 
 .anim-titles.menu-open::before,
-.oscars-bloc.menu-open::after {
+.oscars-bloc.menu-open::before {
   display: none;
 }
 
 .site-studio-down p {
   margin: auto;
   font-size: 16px;
+  margin-bottom: 35px;
 }
 .site-studio-down p::after {
   content: url(../images/hibiscus_footer.png);
@@ -397,7 +417,7 @@ label {
   content: url(../images/orchid.png);
   position: absolute;
   right: 830px;
-  bottom: 300px;
+  bottom: 260px;
 }
 
 .site-studio::before {
@@ -417,6 +437,7 @@ label {
 .main-character {
   position: relative;
   font-size: 20px;
+  top: 250px;
 }
 .main-character h3 {
   background-image: url(../images/orange-characters.png);
@@ -438,6 +459,7 @@ label {
   background-position: center;
   background-size: cover;
   height: 300px;
+  width: 100%;
 }
 .swiper-slide img {
   display: flex;
@@ -447,66 +469,82 @@ label {
 }
 
 /***Ecran 1024px****/
-@media (min-width: 900px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
   /** section navbar, video, logo et menu**/
-  .home {
-    margin-left: 100px;
-    margin-right: 50px;
+  .main-navigation {
+    position: static;
+    width: 100%;
   }
   #background-video {
     width: 100%;
-    padding-top: 420px;
+    padding-top: 370px;
     padding-bottom: 300px;
   }
   .banner {
-    min-height: 460px;
+    min-height: 500px;
     margin-bottom: 100px;
+  }
+  .banner img {
+    margin-left: -100px;
   }
   .sidenav-class .title-menu {
     left: 30%;
   }
   .sidenav-class .close {
-    height: 550px;
+    height: 850px;
   }
   .main-navigation ul li {
     font-size: 30px;
   }
   /** section Menu **/
-  .site-studio-down p::after,
-  .site-story::after,
-  .site-place::before,
-  .site-place::after,
-  .site-studio::after {
-    content: none;
-  }
   .main-navigation ul .site-title {
     bottom: -100px;
   }
-  /** section L'histoire **/
-  .story::before {
-    content: none;
+  .site-studio-down p::after {
+    top: -200px;
+    right: -780px;
   }
-  .story::after {
-    content: none;
+  .site-story::after {
+    left: 270px;
+    top: -200px;
+  }
+  .site-place::before {
+    right: 380px;
+  }
+  .site-place::after {
+    left: 300px;
+  }
+  .site-characters::before {
+    right: 530px;
+    bottom: 260px;
+  }
+  .site-studio::before {
+    right: 460px;
+  }
+  .site-studio::after {
+    bottom: 300px;
+    left: 580px;
+  }
+  /** section L'histoire **/
+  #story {
+    position: relative;
+    margin-top: 2%;
+  }
+  #story p {
+    position: relative;
+    left: -220px;
+    width: 170%;
   }
   .text-story {
-    margin-top: -105px;
-    font-size: 40px;
-    color: #FFF5E9;
+    right: -150px;
+    margin-top: -100px;
+    font-size: 55px;
   }
   .title-story img {
-    width: 60%;
-  }
-  .story__article {
-    margin-top: 50px;
-  }
-  .story__article::before {
-    right: -100px;
-    margin-top: -80px;
-  }
-  .story__article::after {
-    right: -100px;
-    margin-top: -80px;
+    position: absolute;
+    width: 40%;
+    top: -10px;
+    right: 300px;
   }
   /** section Les personnages **/
   .swiper {
@@ -534,6 +572,10 @@ label {
   .anim-clouds h3::before {
     content: none;
   }
+  #place p {
+    left: 40px;
+    width: 80%;
+  }
   /** section Studio Koukaki **/
   .text-studio {
     font-size: 30px;
@@ -545,8 +587,10 @@ label {
     width: 20em;
     bottom: 8em;
   }
-  .oscars-bloc::after {
-    content: none;
+  .background img {
+    width: 50%;
+    height: 30%;
+    margin-left: 180px;
   }
   .anim-titles::after {
     right: 0;
@@ -555,30 +599,31 @@ label {
 /***Ecran de 768px***/
 @media (min-width: 750px) and (max-width: 899px) {
   /** section navbar, video, logo et menu**/
-  .home {
-    margin-left: 100px;
-    margin-right: 50px;
-  }
   .main-navigation {
-    height: 120px;
+    height: 100px;
   }
   #background-video {
+    padding-top: 100px;
+    padding-bottom: 100px;
     width: 100%;
-    padding-top: 300px;
-    padding-bottom: 300px;
   }
   .banner {
     min-height: 420px;
     margin-bottom: 100px;
   }
+  .banner img {
+    width: 40%;
+  }
   .float-logo {
-    right: -180px;
+    top: -20px;
+    right: -220px;
   }
   .sidenav-class .title-menu {
-    left: 30%;
+    left: 10%;
+    top: 30px;
   }
   .sidenav-class .close {
-    height: 550px;
+    height: 850px;
   }
   .main-navigation ul li {
     font-size: 30px;
@@ -587,29 +632,68 @@ label {
     max-width: 50%;
     margin-left: 70px;
   }
+  .site-studio-down p::after {
+    top: -200px;
+    right: -660px;
+  }
+  .site-story::after {
+    left: 200px;
+    top: -230px;
+  }
+  .site-place::before {
+    right: 300px;
+  }
+  .site-place::after {
+    left: 200px;
+  }
+  .site-characters::before {
+    right: 530px;
+    bottom: 260px;
+  }
+  .site-studio::before {
+    right: 360px;
+    bottom: 50px;
+  }
+  .site-studio::after {
+    bottom: 300px;
+    left: 460px;
+  }
   /** section L'histoire **/
+  #story {
+    position: relative;
+    margin-top: 2%;
+  }
   .story::before {
     content: none;
   }
   .story::after {
-    content: none;
+    top: -50px;
+  }
+  #story p {
+    position: relative;
+    left: -100px;
+    width: 120%;
   }
   .text-story {
-    margin-top: -95px;
-    font-size: 36px;
+    right: -250px;
+    margin-top: -100px;
+    font-size: 40px;
   }
   .title-story img {
-    width: 55%;
+    position: absolute;
+    width: 40%;
+    top: -10px;
+    right: 200px;
   }
   /** section Les personnages **/
   .swiper {
-    width: 500px;
+    width: 800px;
   }
   .swiper-slide {
     height: 50px;
   }
   .swiper-slide img {
-    width: 50px;
+    width: 140px;
   }
   .main-character h3 {
     right: 100px;
@@ -618,6 +702,14 @@ label {
     display: none;
   }
   /** section Lieu**/
+  .story #place {
+    min-height: 400px;
+  }
+  #place p {
+    width: 120%;
+    top: 0;
+    font-size: 12px;
+  }
   #place::before {
     content: none;
   }
@@ -634,6 +726,7 @@ label {
   }
   .background img {
     width: 70%;
+    right: 100px;
   }
   .anim-titles::before {
     content: none;
@@ -644,97 +737,183 @@ label {
   .oscars-bloc::before {
     content: none;
   }
-  .oscars-bloc::after {
+  #oscars-id::after {
     content: none;
   }
   #oscars-id {
     flex-direction: column;
   }
+  #oscars-id::after {
+    margin-top: -900px;
+  }
+  .oscars-nomination {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 50px;
+  }
 }
 /* Media query pour les écrans plus petits smartphone*/
-/****Ecran 480px*****/
-@media (min-width: 350px) and (max-width: 490px) {
-  /** section navbar, video, logo et menu**/
-  .home {
-    margin-left: 50px;
+/****Ecran 480px et 320px*****/
+@media (min-width: 480px) and (max-width: 600px) {
+  .main-navigation {
+    height: 100px;
+    width: 100%;
   }
   #background-video {
     width: 100%;
-    padding-top: 360px;
+    background-size: cover;
+    padding-top: 300px;
     padding-bottom: 300px;
   }
   .banner {
-    min-height: 220px;
+    min-height: 270px;
     margin-bottom: 100px;
   }
   .float-logo {
-    right: -120px;
-    top: 50px;
+    right: -80px;
+    width: 80%;
   }
   .sidenav-class .title-menu {
-    left: 30%;
+    left: 15%;
+    top: 25px;
+    font-size: 16px;
+    width: 35%;
+  }
+  label {
+    margin-left: 320px;
   }
   .sidenav-class .close {
-    height: 380px;
-    top: 60px;
+    height: 850px;
+  }
+  .main-navigation ul li {
+    font-size: 30px;
+  }
+  .site-title img {
+    max-width: 50%;
+    margin-left: 70px;
   }
   /** section Menu **/
-  .site-story::before {
-    content: none;
-  }
   .main-navigation {
-    height: 150px;
+    height: 100px;
   }
   .main-navigation ul {
     display: initial;
-    margin-left: 150px;
-    margin-top: -80px;
+    padding-left: 150px;
+    padding-top: 10px;
   }
   .main-navigation .site-title {
     bottom: -20px;
   }
   .main-navigation ul li {
-    font-size: 26px;
+    font-size: 24px;
+    margin-bottom: 50px;
   }
   .sidenav-class a {
     bottom: 0;
+  }
+  .sidenav-class .close {
+    top: 20px;
+    padding-top: 0;
   }
   .site-place::after {
     right: 0;
     left: 180px;
     bottom: 0;
   }
+  .site-studio-down p {
+    margin-top: 350px;
+  }
+  .site-studio-down p::after {
+    top: -150px;
+    right: -400px;
+  }
+  .site-story::after {
+    left: 200px;
+    top: -30px;
+  }
+  .site-place::before {
+    right: 400px;
+  }
+  .site-place::after {
+    left: 200px;
+    top: 100px;
+  }
+  .site-characters::before {
+    right: 530px;
+    bottom: 260px;
+  }
+  .site-studio::before {
+    right: 360px;
+    bottom: 50px;
+  }
+  .site-studio::after {
+    bottom: 300px;
+    left: 460px;
+  }
   /** section L'histoire **/
+  #story {
+    position: relative;
+    margin-top: 2%;
+  }
   .story::before {
     content: none;
+  }
+  #story p {
+    position: relative;
+    left: -115px;
+    width: 120%;
+    top: 50px;
+  }
+  .text-story {
+    right: -100px;
+    margin-top: -240px;
+    font-size: 20px;
+  }
+  .title-story img {
+    position: absolute;
+    width: 40%;
+    top: -20px;
+    right: 200px;
+    padding-top: 1%;
   }
   .story::after {
     content: none;
   }
-  .text-story {
-    margin-top: -65px;
-    font-size: 26px;
-  }
-  .title-story img {
-    width: 55%;
-  }
   /** section Les personnages **/
   .swiper {
-    width: 500px;
+    width: 440px;
   }
   .swiper-slide {
-    height: 50px;
+    height: 300px;
   }
   .swiper-slide img {
-    width: 50px;
+    width: 200px;
+    margin-left: 100px;
+  }
+  .main-character {
+    position: relative;
+    font-size: 12px;
   }
   .main-character h3 {
-    right: 100px;
+    right: 40px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .main-character figcaption {
+    padding-left: 70%;
   }
   .story #characters {
     display: none;
   }
   /** section Lieu**/
+  .story #place {
+    min-height: 0;
+  }
+  #place p {
+    width: 120%;
+    top: 0;
+    font-size: 12px;
+  }
   #place::before {
     content: none;
   }
@@ -746,11 +925,11 @@ label {
   }
   /** section Studio Koukaki **/
   .text-studio {
-    font-size: 20px;
-    left: 3em;
+    font-size: 28px;
   }
   .background img {
-    width: 70%;
+    width: 80%;
+    left: -130px;
   }
   .anim-titles::before {
     content: none;
@@ -761,20 +940,238 @@ label {
   .oscars-bloc::before {
     content: none;
   }
-  .oscars-bloc::after {
+  #oscars-id::after {
+    content: none;
+  }
+  .background::after {
     content: none;
   }
   #oscars-id {
     flex-direction: column;
   }
-  #oscars-id .oscars-text {
+  #oscars-id::after {
+    margin-top: -500px;
+  }
+  .oscars-text {
+    font-size: 20px;
+    right: -50px;
+    margin-top: 1px;
+  }
+  .oscars-nomination {
+    width: 80%;
+    margin-left: 50px;
+  }
+}
+/****Ecran 320px*****/
+@media (max-width: 320px) {
+  .main-navigation {
+    height: 100px;
+    width: 100%;
+  }
+  #background-video {
+    width: 100%;
+    background-size: cover;
+    padding-top: 300px;
+    padding-bottom: 300px;
+  }
+  .banner {
+    min-height: 180px;
+    margin-bottom: 100px;
+  }
+  .float-logo {
+    position: absolute;
+    right: -20px;
+    width: 80%;
+  }
+  .sidenav-class .title-menu {
+    left: 15%;
+    top: 25px;
+    font-size: 16px;
+    width: 50%;
+  }
+  label {
+    margin-left: 250px;
+  }
+  .sidenav-class .close {
+    height: 850px;
+  }
+  .main-navigation ul li {
+    font-size: 30px;
+  }
+  .site-title img {
+    max-width: 50%;
+    margin-left: 70px;
+  }
+  /** section Menu **/
+  .main-navigation {
+    height: 100px;
+  }
+  .main-navigation ul {
+    display: initial;
+    padding-left: 150px;
+    padding-top: 10px;
+  }
+  .main-navigation .site-title {
+    bottom: -20px;
+  }
+  .main-navigation ul li {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  .sidenav-class a {
+    bottom: 0;
+  }
+  .sidenav-class .close {
+    top: 20px;
+    padding-top: 0;
+  }
+  .site-place::after {
+    right: 0;
+    left: 180px;
+    bottom: 0;
+  }
+  .site-studio-down p {
+    margin-top: 350px;
+  }
+  .site-studio-down p::after {
+    top: -150px;
+    right: -400px;
+  }
+  .site-story::after {
+    left: 200px;
+    top: -30px;
+  }
+  .site-place::before {
+    right: 400px;
+  }
+  .site-place::after {
+    left: 200px;
+    top: 100px;
+  }
+  .site-characters::before {
+    right: 530px;
+    bottom: 260px;
+  }
+  .site-studio::before {
+    right: 360px;
+    bottom: 50px;
+  }
+  .site-studio::after {
+    bottom: 300px;
+    left: 460px;
+  }
+  /** section L'histoire **/
+  #story {
+    position: relative;
+    margin-top: 2%;
+  }
+  .story::before {
+    content: none;
+  }
+  #story p {
+    position: relative;
+    left: -85px;
+    width: 130%;
+    top: 50px;
+  }
+  .text-story {
+    right: -80px;
+    margin-top: -430px;
     font-size: 20px;
   }
-  #oscars-id img {
-    width: 30%;
+  .title-story img {
+    position: absolute;
+    width: 40%;
+    top: -50px;
+    right: 100px;
+    padding-top: 1%;
+  }
+  .story::after {
+    content: none;
+  }
+  /** section Les personnages **/
+  .swiper {
+    width: 440px;
+  }
+  .swiper-slide {
+    height: 300px;
+  }
+  .swiper-slide img {
+    width: 200px;
+    margin-left: 100px;
+  }
+  .main-character {
+    position: relative;
+    font-size: 12px;
+  }
+  .main-character h3 {
+    font-size: 16px;
+    right: 70px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  .main-character figcaption {
+    padding-left: 110%;
+  }
+  .story #characters {
+    display: none;
+  }
+  /** section Lieu**/
+  .story #place {
+    min-height: 0;
+  }
+  #place p {
+    width: 120%;
+    top: 0;
+    font-size: 12px;
+  }
+  #place::before {
+    content: none;
+  }
+  .anim-clouds h3::before {
+    content: none;
+  }
+  .anim-clouds h3::after {
+    content: none;
+  }
+  /** section Studio Koukaki **/
+  .text-studio {
+    font-size: 28px;
+  }
+  .background img {
+    width: 80%;
+    left: -130px;
+  }
+  .anim-titles::before {
+    content: none;
+  }
+  .anim-titles::after {
+    content: none;
+  }
+  .oscars-bloc::before {
+    content: none;
+  }
+  #oscars-id::after {
+    content: none;
+  }
+  .background::after {
+    content: none;
+  }
+  #oscars-id {
+    flex-direction: column;
+  }
+  #oscars-id::after {
+    margin-top: -500px;
+  }
+  .oscars-text {
+    font-size: 20px;
+    right: -50px;
+    margin-top: 1px;
+  }
+  .oscars-nomination {
+    width: 80%;
+    margin-left: 50px;
   }
 }
 /* Media query pour les écrans de bureau */
-/*@media only screen and (min-width: 1024px) {*/
-/* Media query pour une taille d'écran moyenne tablette*/
-/*@media only screen and (max-width: 768px) {*//*# sourceMappingURL=koukaki.css.map */
+/*@media only screen and (min-width: 1024px) {*//*# sourceMappingURL=koukaki.css.map */

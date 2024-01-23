@@ -1,0 +1,144 @@
+//ecran desktop inférieur ou égal à 1600px, desktop du site est égale à 1440px
+/***Ecran 1024px****/
+@media (min-width:1024px) and (max-width:1400px) {
+    /** section navbar, video, logo et menu**/
+        .main-navigation {
+            position: static;
+            width: 100%;
+        }
+        #background-video {
+            width: 100%;
+            padding-top: 370px;
+            padding-bottom: 300px;
+        }
+        .banner {
+            min-height: 500px;
+            margin-bottom: 100px;
+        }
+        .banner img {
+            margin-left: -100px;
+        }    
+        .sidenav-class .title-menu {
+            left: 30%;
+        }
+        .sidenav-class .close {
+            height: 850px;
+        }
+        .main-navigation ul li {
+            font-size: 30px;
+        }
+
+/** section Menu **/
+        .main-navigation ul .site-title {
+            bottom: -100px;
+        }
+// ajouter les images dans le menu burger
+    .site-studio-down p {
+        &::after {//fleur footer
+            top: -200px;
+            right: -780px;
+    }
+    }
+    .site-story {
+        &::after {//grande fleur marguerite
+            left: 270px;
+            top: -200px;
+        }
+    }
+    .site-place {
+        &::before {//boule de petites fleurs
+            right: 380px;
+        }
+        &::after {//chat noir
+            left: 300px;
+        }
+    }
+    .site-characters {
+        &::before {//fleur violette
+            right: 530px;
+            bottom: 260px;
+        }
+    }
+    .site-studio {
+        &::before {//chat orange
+            right: 460px;
+        }
+        &::after {//petite fleur rose
+            bottom: 300px;
+            left: 580px;
+        }
+    }
+
+    /** section L'histoire **/
+        #story {
+            position: relative;
+            margin-top: 2%;
+        }
+        #story p {
+            position: relative;
+            left: -220px;
+            width: 170%;
+        }
+        .text-story {
+            right: -150px;
+            margin-top: -100px;
+            font-size: 55px;
+        }
+        .title-story img {
+            position: absolute;
+            width: 40%;
+            top: -10px;
+            right: 300px;
+        }
+    /** section Les personnages **/
+        .swiper {
+            width: 800px;
+        }
+        .swiper-slide {
+            height: 100px;
+            & img {
+                width: 150px;
+            }
+        }
+        .main-character h3 {
+            right: 100px;
+        }
+        .story #characters {
+            display: none;
+        }
+    /** section Lieu**/
+        #place::before {//image superposée de la section Lieu
+            content: none;
+        }
+        .anim-clouds {
+            & h3::after {
+                content: none;
+            }
+            & h3::before {
+                content: none;
+            }
+        }
+        #place p {
+            left: 40px;
+            width: 80%;
+        }
+    /** section Studio Koukaki **/
+        .text-studio { //titre Studio koukaki
+            font-size: 30px;
+            left: 210px;
+            top: 10px;
+        }
+        .oscars-text {//titre dans l'encart avec fond orange
+            font-size: 24px;
+            width: 20em;
+            bottom: 8em;
+        }
+        .background img {
+            width: 50%;
+            height: 30%;
+            margin-left: 180px;
+        }
+        .anim-titles::after {//fleur multi de droite
+               right: 0;
+        }
+    }

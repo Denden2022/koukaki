@@ -5,7 +5,9 @@ function theme_enqueue_styles() {
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css'));
     wp_enqueue_style('koukaki-style', get_stylesheet_directory_uri() . '/assets/styles/koukaki.css');
     // Enqueue custom script.js
-    wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.js', array('swiper-js'), 1.1, true);
+    wp_enqueue_script('swiper-script', get_stylesheet_directory_uri() . '/js/swiper.js', array('swiper-js'), 1.1, true);
+    wp_enqueue_script('menu-script', get_stylesheet_directory_uri() . '/js/menu.js', array('swiper-js'), 1.1, true);
+    wp_enqueue_script('animation-script', get_stylesheet_directory_uri() . '/js/animation.js', array('swiper-js'), 1.1, true);
     // Enqueue Swiper CSS
     wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
     // Enqueue Swiper JS

@@ -2,6 +2,7 @@
 .main-character {
   position: relative;
   font-size: 20px;
+  top: 250px;
   & h3 {
     background-image: url(../images/orange-characters.png);
     position: relative;
@@ -23,6 +24,7 @@
   background-position: center;
   background-size: cover;
   height: 300px;
+  width: 100%;
   & img {
   display: flex;
   flex-direction: row;

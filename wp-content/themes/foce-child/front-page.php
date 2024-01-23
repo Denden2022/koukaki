@@ -19,14 +19,14 @@ get_header();
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/purple_title_bg.png'; ?>" alt="Background Image">
                 <h1 class="text-story">L'histoire</h1>
             </div>
-            <div>
+            <div class="story-p">
                 <p><?php echo get_theme_mod('story'); ?></p></div>
             </article> 
             
-            <article>
+            
             <!--Template des personnages-->
             <?php get_template_part( 'template-parts/content-characters' ); ?>
-            </article>
+            
             
             <article id="place" class="anim-clouds">
                 <div>
