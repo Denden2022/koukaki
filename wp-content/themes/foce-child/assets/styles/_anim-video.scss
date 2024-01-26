@@ -1,3 +1,13 @@
+//animation du bas vers le haut de la section histoire et studio vers la video
+.story, #studio {
+    @include anim-purpleTitle-video
+  }
+  
+  // animation du haut vers le bas de la video avec la section histoire et studio
+  #background-video, .banner {
+    @include anim-video-purpleTitle
+  }
+
 //flottement du logo
 .anim-logo-scroll {
     @include floatElement;  

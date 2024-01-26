@@ -4,7 +4,6 @@ $color-title: #FFF5E9;
 
 .text-story {
 	position: relative;
-	background-image: fixed;
 	font-family: quicksand;
 	font-weight: bold;
 	font-size: 62px;
@@ -12,7 +11,7 @@ $color-title: #FFF5E9;
 	margin-top: -160px;
 	color: $color-title;
 /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
-		@include anim-title-story;
+		//@include anim-title-story;
 	}
 
 .title-story img {

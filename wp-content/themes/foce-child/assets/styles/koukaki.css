@@ -42,17 +42,25 @@
 @keyframes move-text2 {
   0% {
     transform: translateY(80%);
+    opacity: 0;
   }
   100% {
     transform: translateY(30%);
+    opacity: 1;
   }
 }
 @keyframes move-text {
   0% {
-    transform: translateY(10%);
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 0.5;
   }
   100% {
     transform: translateY(-30%);
+    opacity: 1;
   }
 }
 @keyframes clouds {
@@ -85,16 +93,6 @@
 .site-studio::after,
 .close p::after {
   animation: rotateAnimation 20s linear infinite;
-}
-
-.story, #studio {
-  animation-name: down-up;
-  animation-duration: 1500ms;
-}
-
-#background-video, .banner {
-  animation-name: up-down;
-  animation-duration: 1s;
 }
 
 /*section nomination oscars*/
@@ -151,6 +149,16 @@
   left: 100px;
   top: -100px;
   transform-origin: 50% 40%;
+}
+
+.story, #studio {
+  animation-name: down-up;
+  animation-duration: 1500ms;
+}
+
+#background-video, .banner {
+  animation-name: up-down;
+  animation-duration: 1s;
 }
 
 .anim-logo-scroll {
@@ -215,7 +223,6 @@
 
 .text-story {
   position: relative;
-  background-image: fixed;
   font-family: quicksand;
   font-weight: bold;
   font-size: 62px;
@@ -223,8 +230,6 @@
   margin-top: -160px;
   color: #FFF5E9;
   /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
-  animation: move-text2 2s ease-in-out forwards;
-  transform: translateY();
 }
 
 .title-story img {
