@@ -17,7 +17,9 @@ get_header();
            <article id="story-article" class="story__article"> 
             <div class="title-story">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/purple_title_bg.png'; ?>" alt="Background Image">
+            <div class="scroll-title">
                 <h1 class="text-story">L'histoire</h1>
+            </div>
             </div>
             <div class="story-p">
                 <p><?php echo get_theme_mod('story'); ?></p></div>

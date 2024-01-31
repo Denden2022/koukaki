@@ -60,24 +60,24 @@ function LogoFloat() {
  * III-mouvement des titres sur fond bleu
  */
   /****** a) animation L'histoire au scroll*****/
-  function interceptStory(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('text-story');
-      } else {
-        entry.target.classList.remove('text-story');
-      }
-    });
-  }
-  
-  // Création de l'instance IntersectionObserver
-  const seeStory = new IntersectionObserver(interceptStory, {
-    threshold: 1, // Déclenche la fonction de rappel lorsque 100% du texte est visible
+function interceptStory(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('anim-title-scroll');
+    } else {
+      entry.target.classList.remove('anim-title-scroll');
+    }
   });
-  // Ciblage de l'élément texte à observer
-  const targetTextStory = document.querySelector('.text-story');
-  // Lancement de l'observation
-  seeStory.observe(targetTextStory);
+}
+
+// Création de l'instance IntersectionObserver
+const seeStory = new IntersectionObserver(interceptStory, {
+  threshold: 1, // Déclenche la fonction de rappel lorsque 100% du texte est visible
+});
+// Ciblage de l'élément texte à observer
+const targetTextStory = document.querySelector('.text-story');
+// Lancement de l'observation
+seeStory.observe(targetTextStory);
 
 
   /**** b) titre Studio koukaki*****/

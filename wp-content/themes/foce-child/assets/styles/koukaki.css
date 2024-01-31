@@ -229,7 +229,12 @@
   right: -30%;
   margin-top: -160px;
   color: #FFF5E9;
-  /* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
+  opacity: 0;
+}
+
+.anim-title-scroll {
+  animation: move-text2 2s ease-in-out forwards;
+  transform: translateY();
 }
 
 .title-story img {
@@ -1013,7 +1018,7 @@ label {
   }
   .main-navigation ul {
     display: initial;
-    padding-left: 150px;
+    padding-left: 100px;
     padding-top: 10px;
   }
   .main-navigation .site-title {
@@ -1039,8 +1044,7 @@ label {
     margin-top: 350px;
   }
   .site-studio-down p::after {
-    top: -150px;
-    right: -400px;
+    content: none;
   }
   .site-story::after {
     left: 200px;
@@ -1050,8 +1054,8 @@ label {
     right: 400px;
   }
   .site-place::after {
-    left: 200px;
-    top: 100px;
+    left: 20px;
+    top: 200px;
   }
   .site-characters::before {
     right: 530px;
@@ -1141,7 +1145,8 @@ label {
   }
   /** section Studio Koukaki **/
   .text-studio {
-    font-size: 28px;
+    font-size: 16px;
+    right: 70px;
   }
   .background img {
     width: 80%;
@@ -1169,7 +1174,7 @@ label {
     margin-top: -500px;
   }
   .oscars-text {
-    font-size: 20px;
+    font-size: 12px;
     right: -50px;
     margin-top: 1px;
   }

@@ -10,8 +10,11 @@ $color-title: #FFF5E9;
 	right: -30%;
 	margin-top: -160px;
 	color: $color-title;
-/* Ajouter l'animation du titre L'histoire lorsque la classe est présente */
-		//@include anim-title-story;
+	opacity: 0;
+	}
+
+.anim-title-scroll {
+	@include anim-title-story;
 	}
 
 .title-story img {
