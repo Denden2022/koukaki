@@ -3,7 +3,21 @@
     position: absolute;
     content: url("../images/Studio_Koukaki-image_place.png");
 }
-.anim-clouds {
+.big-cloud {
+    position: absolute;
+    filter: blur(16px);
+    bottom: 500px;
+    left: 1050px;
+}
+.little-cloud {
+    position: absolute;
+    filter: blur(12px);
+    bottom: 400px;
+    left: 790px;
+    width: 142px;
+    height: 55px;
+}
+/*.anim-clouds {
     & h3::after {
     position: absolute;
     content: url(../images/big_cloud.png);
@@ -20,7 +34,7 @@
     width: 142px;
     height: 55px;
 }
-}
+}*/
 #place {
     margin-top: 300px;
     & h3 {
@@ -35,11 +49,12 @@
 }
 
 //mouvement des nuages
-.anim-clouds-scroll {
+/*.anim-clouds-scroll {
     & h3::before {
     @include clouds-move;
     }
     & h3::after {
     @include clouds-move;   
 }
-}
+}*/
+

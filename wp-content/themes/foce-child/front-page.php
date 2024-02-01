@@ -33,6 +33,10 @@ get_header();
             <article id="place" class="anim-clouds">
                 <div>
                     <h3>Le Lieu</h3>
+                <div class="big-cloud-scroll">
+                    <img class="big-cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?> " alt="big cloud">
+                    <img class="little-cloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?> " alt="little cloud">
+                </div>    
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
             </article>

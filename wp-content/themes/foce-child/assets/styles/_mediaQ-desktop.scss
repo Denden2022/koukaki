@@ -110,13 +110,11 @@
         #place::before {//image superposée de la section Lieu
             content: none;
         }
-        .anim-clouds {
-            & h3::after {
-                content: none;
-            }
-            & h3::before {
-                content: none;
-            }
+        .big-cloud {
+            display: none;
+        }
+        .little-cloud {
+            display: none;
         }
         #place p {
             left: 40px;

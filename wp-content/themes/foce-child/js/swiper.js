@@ -8,9 +8,9 @@ const mySwiper = new Swiper(".swiper", {
     centeredSlides: true,
     slidesPerView: 3,
     coverflowEffect: {
-      rotate: 30,
-      stretch: -70,
-      slideShadows: false,
+      rotate: 50,
+      stretch: 0,
+      slideShadows: true,
     },
   });
   

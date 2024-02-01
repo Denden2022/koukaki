@@ -130,13 +130,11 @@
     #place::before {//image superposée de la section Lieu
         content: none;
     }
-    .anim-clouds {
-        & h3::before {
-            content: none;
-        }
-        & h3::after {
-            content: none;
-        }
+    .big-cloud {
+        display: none;
+    }
+    .little-cloud {
+        display: none;
     }
     /** section Studio Koukaki **/
         .text-studio { //titre Studio koukaki

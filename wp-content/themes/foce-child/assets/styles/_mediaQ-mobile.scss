@@ -10,7 +10,10 @@
             background-size: cover;
             padding-top: 300px;
             padding-bottom: 300px;
+            z-index: -1; //pour vérifier si le banner est toujours présent à l'arrière plan
+            overflow: hidden;
         }
+
         .banner {
             min-height: 270px;
             margin-bottom: 100px;
@@ -147,7 +150,7 @@ margin-bottom: 50px;
             height: 300px;
             & img {
             width: 200px;
-            margin-left: 100px;
+            margin-left: 15px;
             }
         }
         .main-character {
@@ -245,6 +248,8 @@ margin-bottom: 50px;
         background-size: cover;
         padding-top: 300px;
         padding-bottom: 300px;
+        z-index: -1; //pour vérifier si le banner est toujours présent à l'arrière plan
+        overflow: hidden;
     }
     .banner {
         min-height: 180px;
@@ -382,7 +387,7 @@ margin-top: 350px;
         height: 300px;
         & img {
         width: 200px;
-        margin-left: 100px;
+        margin-left: 10px;
         }
     }
     .main-character {

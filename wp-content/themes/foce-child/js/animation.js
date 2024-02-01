@@ -106,7 +106,7 @@ seeStudio.observe(targetTextStudio);
  * IV-mouvements des nuages au scroll
  */
  // Je cible la class concernée
- function cloudsAnimation() {
+ /*function cloudsAnimation() {
  const clouds = document.querySelector('.anim-clouds');
 
  // A chaque fois que j'ajoute la nouvelle class, j'observe les nuages en mouvement
@@ -124,4 +124,81 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.querySelector('#place'));
 }
 
+cloudsAnimation();*/
+
+/*function cloudsAnimation() {
+  const bigCloud = document.querySelector('.big-cloud');
+  const littleCloud = document.querySelector('.little-cloud');
+  const initialLeftPositionBig = parseFloat(getComputedStyle(bigCloud).left); // position initiale à gauche pour le gros nuage
+  const initialLeftPositionLittle = parseFloat(getComputedStyle(littleCloud).left); // position initiale à gauche pour le petit nuage
+
+  const handleScroll = () => {
+    const scrollLeft = window.scrollY;
+    const parallaxValueBigCloud = Math.min(Math.max(scrollLeft * 0.7, 0), initialLeftPositionBig+1440-300); // La valeur de parallaxe du bigCloud
+    const parallaxValueLittleCloud = Math.min(Math.max(scrollLeft * 0.6, 0), initialLeftPositionLittle+1440-300); // La valeur de parallaxe du littleCloud
+
+    // Si les éléments sont dans la vue
+    if (bigCloud.classList.contains('in-view') && littleCloud.classList.contains('in-view')) {
+      bigCloud.style.transform = `translateX(${initialLeftPositionBig - parallaxValueBigCloud}px)`;
+      littleCloud.style.transform = `translateX(${initialLeftPositionLittle - parallaxValueLittleCloud}px)`;
+    }
+  };
+
+  const seeClouds = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        bigCloud.classList.add('in-view');
+        littleCloud.classList.add('in-view');
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        bigCloud.classList.remove('in-view');
+        littleCloud.classList.remove('in-view');
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  seeClouds.observe(document.querySelector('#place'));
+}
+
+cloudsAnimation();*/
+
+function cloudsAnimation() {
+  const bigCloud = document.querySelector('.big-cloud');
+  const littleCloud = document.querySelector('.little-cloud');
+  const initialLeftPositionBig = parseFloat(getComputedStyle(bigCloud).left); // position initiale à gauche pour le gros nuage
+  const initialLeftPositionLittle = parseFloat(getComputedStyle(littleCloud).left); // position initiale à gauche pour le petit nuage
+  const maxRightTranslation = 300; // Limite à droite pour l'arrêt de l'animation
+
+  const handleScroll = () => {
+    const scrollLeft = window.scrollY;
+    
+    const parallaxValueBigCloud = Math.min(Math.max(scrollLeft * 0.7, 0), initialLeftPositionBig + 1440 - maxRightTranslation);
+    const parallaxValueLittleCloud = Math.min(Math.max(scrollLeft * 0.6, 0), initialLeftPositionLittle + 1440 - maxRightTranslation);
+
+    // Si les éléments sont dans la vue
+    if (bigCloud.classList.contains('in-view') && littleCloud.classList.contains('in-view')) {
+      bigCloud.style.transform = `translateX(${initialLeftPositionBig - parallaxValueBigCloud}px)`;
+      littleCloud.style.transform = `translateX(${initialLeftPositionLittle - parallaxValueLittleCloud}px)`;
+    }
+  };
+
+  const seeClouds = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        bigCloud.classList.add('in-view');
+        littleCloud.classList.add('in-view');
+        window.addEventListener('scroll', handleScroll);
+      } else {
+        bigCloud.classList.remove('in-view');
+        littleCloud.classList.remove('in-view');
+        window.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  seeClouds.observe(document.querySelector('#place'));
+}
+
 cloudsAnimation();
+
